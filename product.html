@@ -1,0 +1,1087 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+
+    <link rel="stylesheet" href="css/all.css">
+    
+    <title>訂房產品頁</title>
+</head>
+
+<body>
+    <!-- 表頭開始 -->
+    <header class="index-header product-header fixed-header ">
+        <nav class="nav-header">
+            <div class="container-xxl">
+                <!-- 導覽列開始 -->
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-6">
+                        <h1 class="mb-0"><a href="index.html">doorway</a></h1>
+                    </div>
+                    <div class="col-6">
+                        <ul class="navbar d-flex  justify-content-end">
+                            <li class=" me-3 ">
+                                <select class="  fw-light text-primary rounded-pill border-0">
+                                    <option selected>TWD</option>
+                                    <option value="1">JPY</option>
+                                    <option value="2">EUR</option>
+                                    <option value="3">USD</option>
+                                </select>
+                            </li>
+                            <li class="text-hover me-2"><a href="publish.html">刊登旅宿</a></li>
+                            <li class="user user-hover ">
+                                <a href="" class="d-flex align-items-center " data-bs-toggle="dropdown" data-bs-display="static"
+                                    aria-expanded="false">
+                                    <div class="pic ">
+                                    </div>
+                                    <div class="txt ms-2">
+                                        <h5 class="mb-0">Chia Ying</h5>
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item  d-flex align-items-center py-3" href="adminMail.html">
+                                            <span class="material-icons me-3 ">
+                                                mark_email_unread
+                                            </span>
+                                            訊息通知
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item d-flex align-items-center py-3" href="adminOrder.html">
+                                            <span class="material-icons me-3 ">
+                                                description
+                                            </span>
+                                            管理訂單
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item d-flex align-items-center py-3" href="adminEvaluation.html">
+                                            <span class="material-icons me-3 ">
+                                                grade
+                                            </span>
+                                            住宿評語
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item d-flex align-items-center py-3" href="adminFavorite.html">
+                                            <span class="material-icons me-3 ">
+                                                favorite
+                                            </span>
+                                            心願清單
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item d-flex align-items-center py-3" href="adminProfile.html">
+                                            <span class="material-icons me-3 ">
+                                                account_circle
+                                            </span>
+                                            個人資料
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item d-flex align-items-center py-3 " href="signup.html">
+                                            <span class="material-icons me-3">
+                                                person_add
+                                            </span>
+                                            註冊
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item d-flex align-items-center py-3" href="signup.html">
+                                            <span class="material-icons me-3">
+                                                login
+                                            </span>
+                                            登入
+                                        </a>
+                                    </li>
+                                </ul>
+            
+                            </li>
+                            <!-- 漢堡選單開始 -->
+                            <li class="hamburger ">
+                                <a class="d-flex align-items-center justify-content-end">
+                                    <span class="material-icons-outlined">
+                                        dehaze
+                                    </span>
+                                </a>
+                                <!-- 選單內容開始 -->
+                                <div class="ham-card bg-white px-1 " >
+                                    <hr class="my-0 mb-3">
+                                    <div class="ham-body ">
+                                        <a href="adminMail.html" class="d-flex align-items-center">
+                                            <span class="material-icons-outlined me-3">mark_email_unread</span>訊息通知
+                                        </a>
+                                        <a href="adminOrder.html" class="d-flex align-items-center">
+                                            <span class="material-icons-outlined me-3">article</span>管理訂單
+                                        </a>
+                                        <a href="adminEvaluation.html" class="d-flex align-items-center">
+                                            <span class="material-icons-outlined me-3">star_border_purple500</span>住宿評語
+                                        </a>
+                                        <a href="adminFavorite.html" class="d-flex align-items-center">
+                                            <span class="material-icons-outlined me-3">favorite_border</span>心願清單
+                                        </a>
+                                        <a href="adminProfile.html" class="d-flex align-items-center">
+                                            <span class="material-icons-outlined me-3">person_outline</span>個人資料
+                                        </a>
+                                        <hr>
+                                        <a href="" class="d-flex align-items-center">
+                                            <span class="material-icons-outlined me-3">language</span>語系
+                                        </a>
+                                        <a href="publish.html" class="d-flex align-items-center">
+                                            <span class="material-icons-outlined me-3">home</span>刊登旅宿
+                                        </a>
+                                        <hr>
+                                        <a href="signup.html" class="d-flex align-items-center">
+                                            <span class="material-icons-outlined me-3">person_add</span>註冊
+                                        </a>
+                                        <a href="signup.html" class="d-flex align-items-center">
+                                            <span class="material-icons-outlined me-3">login</span>登入
+                                        </a>
+                            
+                            
+                                    </div>
+                                </div>
+                                <!-- 選單內容結束 -->
+                            </li>
+                            <!-- 漢堡選單結束 -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- 導覽列結束 -->
+            </div>
+        </nav>
+        </nav>
+        <!-- 搜尋欄開始 -->
+        <nav class="product-input bg-warning pt-4 mb-4">
+            <div class="container-xxl ">
+                <form action="" class="d-flex align-items-center ">
+                    <a href="index.html" class=" me-3"><span class="material-icons">chevron_left</span></a>
+                    <label for="" class="where search w-100 ">
+                        <input class="form-control py-4 fw-normal" type="text" placeholder="土耳其 ‧ 選取日期">
+                    </label>
+                </form>
+            </div>
+        </nav>
+        <!-- 搜尋欄結束 -->
+        <!-- 標籤開始 -->
+        <nav class="product-tag">
+            <div class="container-xxl">
+                <!-- Slider main container -->
+                <div class="swiper-container" id="swiper2">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper ">
+                        <!-- Slides -->
+                        <div class="swiper-slide ">
+                            <h4><span class="badge rounded-pill bg-warning text-primary fw-light">客房服務</span></h4>
+                        </div>
+                        <div class="swiper-slide ">
+                            <h4><span class="badge rounded-pill bg-warning text-primary fw-light">住宿提供</span></h4>
+                        </div>
+                        <div class="swiper-slide ">
+                            <h4><span class="badge rounded-pill bg-warning text-primary fw-light">雙人早餐</span></h4>
+                        </div>
+                        <div class="swiper-slide ">
+                            <h4><span class="badge rounded-pill bg-warning text-primary fw-light">攜帶寵物</span></h4>
+                        </div>
+                        <div class="swiper-slide ">
+                            <h4><span class="badge rounded-pill bg-warning text-primary fw-light">免費取消</span></h4>
+                        </div>
+                        <div class="swiper-slide ">
+                            <h4><span class="badge rounded-pill bg-warning text-primary fw-light">客房服務</span></h4>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </nav>
+        <!-- 標籤結束 -->
+    </header>
+    <!-- 表頭結束 -->
+    <main class="product-main product-same-banner px-md-4 ">
+        <div class="container-xxl">
+            <div class="row">
+                <!-- 左欄開始 -->
+                <div class="col-md-3  ">
+                    <section class="product-aside  py-6  h-100">
+                        <form action="" class="aside-form pe-6">
+                            <!-- 搜尋欄開始 -->
+                            <div class="aside-search  mb-7">
+                                <h4 class="mb-3">搜尋</h4>
+                                <label for="" class="where w-100 mb-1">
+                                    <input class="form-control py-4 fw-normal" type="text" placeholder="你要去哪裡？">
+                                </label>
+                                <label for="" class="where date w-100 mb-1">
+                                    <input class="form-control py-4 fw-normal" type="text" placeholder="入住 ─ 退房">
+                                </label>
+                                <label for="" class="where person w-100 mb-3">
+                                    <input class="form-control py-4 fw-normal" type="text" placeholder="新增人數">
+                                </label>
+                                <a href="" class=" btn btn-primary py-4 w-100 d-flex align-items-center justify-content-center">
+                                    <span class="material-icons">search</span>搜尋
+                                </a>
+                            </div>
+                            <!-- 搜尋欄結束 -->
+                            
+                            <!-- 星級開始 -->
+                            <div class="">
+                                <h4 class="mb-3">星級</h4>
+                                <div class="form-check mb-2 ">
+                                    <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault ">
+                                    <label class="form-check-label w-100 fw-normal" for="flexCheckDefault">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-0">1星級</p>
+                                            <p class="p-number mb-0">（20）</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault" checked>
+                                    <label class="form-check-label w-100 fw-normal" for="flexCheckDefault">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-0">2星級</p>
+                                            <p class="p-number mb-0">（40）</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault ">
+                                    <label class="form-check-label w-100 fw-normal" for="flexCheckDefault">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-0">3星級</p>
+                                            <p class="p-number mb-0">（33）</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault ">
+                                    <label class="form-check-label w-100 fw-normal" for="flexCheckDefault">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-0">4星級</p>
+                                            <p class="p-number mb-0">（72）</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault ">
+                                    <label class="form-check-label w-100 fw-normal" for="flexCheckDefault">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-0">5星級</p>
+                                            <p class="p-number mb-0">（54）</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-check ">
+                                    <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault ">
+                                    <label class="form-check-label w-100 fw-normal" for="flexCheckDefault">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-0">無星級</p>
+                                            <p class="p-number mb-0">（73）</p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- 星級結束 -->
+                            <hr>
+                            <!-- 評分開始 -->
+                            <div>
+                                <h4 class="mb-3">評分</h4>
+                                <div class="form-check mb-2 ">
+                                    <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault ">
+                                    <label class="form-check-label w-100 fw-normal" for="flexCheckDefault">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-0">好極了：9分以上</p>
+                                            <p class="p-number mb-0">（20）</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault" checked>
+                                    <label class="form-check-label w-100 fw-normal" for="flexCheckDefault">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-0">非常好：8分以上</p>
+                                            <p class="p-number mb-0">（40）</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault ">
+                                    <label class="form-check-label w-100 fw-normal" for="flexCheckDefault">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-0">好：7分以上</p>
+                                            <p class="p-number mb-0">（33）</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault ">
+                                    <label class="form-check-label w-100 fw-normal" for="flexCheckDefault">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-0">愉悅：6分以上</p>
+                                            <p class="p-number mb-0">（72）</p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- 評分結束 -->
+                            <hr>
+                            <!-- 設施開始 -->
+                            <div>
+                                <h4 class="mb-3">設施</h4>
+                                <div class="form-check mb-2 ">
+                                    <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault ">
+                                    <label class="form-check-label w-100 fw-normal" for="flexCheckDefault">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-0">停車場</p>
+                                            <p class="p-number mb-0">（20）</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault" checked>
+                                    <label class="form-check-label w-100 fw-normal" for="flexCheckDefault">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-0">餐廳</p>
+                                            <p class="p-number mb-0">（40）</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault ">
+                                    <label class="form-check-label w-100 fw-normal" for="flexCheckDefault">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-0">客房服務</p>
+                                            <p class="p-number mb-0">（33）</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault ">
+                                    <label class="form-check-label w-100 fw-normal" for="flexCheckDefault">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-0">酒吧</p>
+                                            <p class="p-number mb-0">（72）</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault ">
+                                    <label class="form-check-label w-100 fw-normal" for="flexCheckDefault">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-0">可攜帶寵物</p>
+                                            <p class="p-number mb-0">（72）</p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- 設施結束 -->
+                        </form>
+                    </section>
+                </div>
+                <!-- 左欄結束 -->
+                <!-- 右欄開始 -->
+                <div class="col-md-9 ">
+                    <section class="pt-6 pb-80">
+                        <!-- 麵包屑開始 -->
+                        <nav aria-label="breadcrumb ">
+                            <ol class="breadcrumb mb-3">
+                                <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                                <li class="breadcrumb-item ms-1"><a href="#">土耳其</a></li>
+                                <li class="breadcrumb-item active ms-1" aria-current="page">伊斯坦堡</li>
+                            </ol>
+                        </nav>
+                        <!-- 麵包屑結束 -->
+                        <h2 class="mb-6">搜尋結果：找到 3,200 間住宿</h2>
+                        <!-- 篩選開始 -->
+                        <div class="product-filter d-flex flex-row justify-content-between align-items-center mb-2 inline-block">
+                            <a href="#" class="mb-0 d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#filterModal">
+                                <span class="material-icons ma  me-2">
+                                    filter_list
+                                </span>
+                                篩選
+                            </a>
+                            <a href="#" class="mb-0 d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#sortModal">
+                                <span class="material-icons ma me-2">
+                                    sort
+                                </span>
+                                排序
+                            </a>
+                        </div>
+                        <!-- 篩選結束 -->
+                        <!-- 排序modal開始 -->
+                        <div class="modal fade " id="sortModal" tabindex="-1" aria-labelledby="sortModalLabel" aria-hidden="true">
+                            <div class="modal-dialog ">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="exampleModalLabel">排序</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-check mb-4">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                價錢 (低~高)
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-4">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                住客評分
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-4">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                星級 (0~5分)
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-4">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                距離遠近
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                住房類型
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary py-4 w-100" data-bs-dismiss="modal">完成</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 排序modal結束 -->
+                        <!-- 篩選Modal開始 -->
+                        <div class="modal filterModal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="filterModalLabel">篩選</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <section class="mb-6">
+                                            <h5 class="mb-4">預算</h5>
+                                            <div class="row ">
+                                                <div class="col">
+                                                    <label for="customRange1" class="form-label w-100 mb-0">
+                                                        <div class="d-flex justify-content-between ">
+                                                            <p class="mb-0"><small>NT$0</small></p>
+                                                            <p class="mb-0"><small>NT$9,000+</small></p>
+                                                        </div>
+                                                    </label>
+                                                    <input type="range" class="form-range" id="customRange1">
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <section class="mb-6">
+                                            <h5 class="mb-4">星級</h5>
+                                            <div class="row row-cols-2 g-4">
+                                                <div class="col">
+                                                    <div class="f-item active">1星級</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="f-item">2星級</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="f-item">3星級</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="f-item">4星級</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="f-item">5星級</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="f-item">無星級</div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <section class="mb-6">
+                                            <h5 class="mb-4">評分</h5>
+                                            <div class="row row-cols-2 g-4">
+                                                <div class="col">
+                                                    <div class="f-item ">好極了：9分以上</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="f-item">非常好：8分以上</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="f-item">好：7分以上</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="f-item">愉悅：6分以上</div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <section class="">
+                                            <h5 class="mb-4">設施</h5>
+                                            <div class="row row-cols-2 g-4">
+                                                <div class="col">
+                                                    <div class="f-item ">停車場</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="f-item">餐廳</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="f-item">可攜帶寵物</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="f-item">客房服務</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="f-item">酒吧</div>
+                                                </div>
+                                                <div class="col">
+                                                    <a href="" class="text-danger btn-more ">顯示更多</a>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="d-flex justify-content-end w-100">
+                                            <button type="button" class="btn btn-secondary py-4 w-100 me-4">清除全部</button>
+                                            <button type="button" class="btn btn-primary py-4 w-100" data-bs-dismiss="modal">完成</button>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 篩選Modal結束 -->
+                        <!-- 卡片開始 -->
+                        <div class="">
+                            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3  g-md-4 mb-56">
+                                <div class="col ">
+                                    <a href="productDital.html">
+                                        <div class="card">
+                                            <div class="img">
+                                                <img src="./img/procuct1.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body ">
+                                                <div class="d-flex justify-content-between align-items-start mb-5">
+                                                    <div>
+                                                        <h5 class="card-title mb-1">杜沃加拉塔酒店</h5>
+                                                        <p class="mb-2 fw-normal">Villa Centaurium</p>
+                                                        <p class="mb-0"><small>8位 · 3間臥室 · 5張床 · 2間衛浴</small></p>
+                                                    </div>
+                                                    <div class="score text-white bg-primary rounded-1 p-2 fw-bold">8.3</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="icon-color">
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                    </div>
+                                                    <h5 class="card-price mb-1">TWD 1,971</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col ">
+                                    <a href="productDital.html">
+                                        <div class="card">
+                                            <div class="img">
+                                                <img src="./img/procuct2.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body ">
+                                                <div class="d-flex justify-content-between align-items-start mb-5">
+                                                    <div>
+                                                        <h5 class="card-title mb-1">康斯坦丁諾艾文店</h5>
+                                                        <p class="mb-2 fw-normal">Constantino Hotel</p>
+                                                        <p class="mb-0"><small>8位 · 3間臥室 · 5張床 · 2間衛浴</small></p>
+                                                    </div>
+                                                    <div class="score text-white bg-primary rounded-1 p-2 fw-bold">9.2</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="icon-color">
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                    </div>
+                                                    <h5 class="card-price mb-1">TWD 3,280</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a href="productDital.html">
+                                        <div class="card">
+                                            <div class="img">
+                                                <img src="./img/procuct3.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body ">
+                                                <div class="d-flex justify-content-between align-items-start mb-5">
+                                                    <div>
+                                                        <h5 class="card-title mb-1">總理公園酒店</h5>
+                                                        <p class="mb-2 fw-normal">Premier Parc Hotel</p>
+                                                        <p class="mb-0"><small>8位 · 3間臥室 · 5張床 · 2間衛浴</small></p>
+                                                    </div>
+                                                    <div class="score text-white bg-primary rounded-1 p-2 fw-bold">8.8</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="icon-color">
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                    </div>
+                                                    <h5 class="card-price mb-1">TWD 2,785</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a href="productDital.html">
+                                        <div class="card">
+                                            <div class="img">
+                                                <img src="./img/procuct4.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body ">
+                                                <div class="d-flex justify-content-between align-items-start mb-5">
+                                                    <div>
+                                                        <h5 class="card-title mb-1">勝利套房酒店</h5>
+                                                        <p class="mb-2 fw-normal">Victory Suites</p>
+                                                        <p class="mb-0"><small>8位 · 3間臥室 · 5張床 · 2間衛浴</small></p>
+                                                    </div>
+                                                    <div class="score text-white bg-primary rounded-1 p-2 fw-bold">9.3</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="icon-color">
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                    </div>
+                                                    <h5 class="card-price mb-1">TWD 3,122</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a href="productDital.html">
+                                        <div class="card">
+                                            <div class="img">
+                                                <img src="./img/procuct5.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body ">
+                                                <div class="d-flex justify-content-between align-items-start mb-5">
+                                                    <div>
+                                                        <h5 class="card-title mb-1">麗茲廣場酒店</h5>
+                                                        <p class="mb-2 fw-normal">Ritz Plaza Hotel</p>
+                                                        <p class="mb-0"><small>8位 · 3間臥室 · 5張床 · 2間衛浴</small></p>
+                                                    </div>
+                                                    <div class="score text-white bg-primary rounded-1 p-2 fw-bold">7.5</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="icon-color">
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                    </div>
+                                                    <h5 class="card-price mb-1">TWD 2,554</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a href="productDital.html">
+                                        <div class="card">
+                                            <div class="img">
+                                                <img src="./img/procuct6.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body ">
+                                                <div class="d-flex justify-content-between align-items-start mb-5">
+                                                    <div>
+                                                        <h5 class="card-title mb-1">宜必思居茲佛拉</h5>
+                                                        <p class="mb-2 fw-normal">Ibis Juiz de Fora</p>
+                                                        <p class="mb-0"><small>8位 · 3間臥室 · 5張床 · 2間衛浴</small></p>
+                                                    </div>
+                                                    <div class="score text-white bg-primary rounded-1 p-2 fw-bold">8.3</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="icon-color">
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                    </div>
+                                                    <h5 class="card-price mb-1">TWD 3,805</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a href="productDital.html">
+                                        <div class="card">
+                                            <div class="img">
+                                                <img src="./img/procuct7.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body ">
+                                                <div class="d-flex justify-content-between align-items-start mb-5">
+                                                    <div>
+                                                        <h5 class="card-title mb-1">塞拉諾酒店</h5>
+                                                        <p class="mb-2 fw-normal">Serrano Residencial</p>
+                                                        <p class="mb-0"><small>8位 · 3間臥室 · 5張床 · 2間衛浴</small></p>
+                                                    </div>
+                                                    <div class="score text-white bg-primary rounded-1 p-2 fw-bold">7.5</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="icon-color">
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                    </div>
+                                                    <h5 class="card-price mb-1">TWD 2,888</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a href="productDital.html">
+                                        <div class="card">
+                                            <div class="img">
+                                                <img src="./img/procuct8.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body ">
+                                                <div class="d-flex justify-content-between align-items-start mb-5">
+                                                    <div>
+                                                        <h5 class="card-title mb-1">索拉爾多斯維拉斯</h5>
+                                                        <p class="mb-2 fw-normal">Pousada Solar dos Vieiras</p>
+                                                        <p class="mb-0"><small>8位 · 3間臥室 · 5張床 · 2間衛浴</small></p>
+                                                    </div>
+                                                    <div class="score text-white bg-primary rounded-1 p-2 fw-bold">9.5</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="icon-color">
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                    </div>
+                                                    <h5 class="card-price mb-1">TWD 3,540</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a href="productDital.html">
+                                        <div class="card">
+                                            <div class="img">
+                                                <img src="./img/procuct9.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body ">
+                                                <div class="d-flex justify-content-between align-items-start mb-5">
+                                                    <div>
+                                                        <h5 class="card-title mb-1">綠山酒店</h5>
+                                                        <p class="mb-2 fw-normal">Hotel Green Hill</p>
+                                                        <p class="mb-0"><small>8位 · 3間臥室 · 5張床 · 2間衛浴</small></p>
+                                                    </div>
+                                                    <div class="score text-white bg-primary rounded-1 p-2 fw-bold">9.3</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="icon-color">
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                        <span class="material-icons">grade</span>
+                                                    </div>
+                                                    <h5 class="card-price mb-1">TWD 4,800</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 卡片結束 -->
+                        <!-- 頁數開始 -->
+                        <nav aria-label="..." class="d-flex justify-content-center" >
+                            <ul class="pagination pagination-lg h-100">
+                                <li class="page-item disabled">
+                                    <span class="page-link h-100 d-flex align-items-center">
+                                        <span class="material-icons ">
+                                            chevron_left
+                                        </span>
+
+                                    </span>
+                                </li>
+                                <li class="page-item "><a class="page-link" href="#">1</a></li>
+                                <li class="page-item active " aria-current="page">
+                                    <span class="page-link">2</span>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link h-100 d-flex align-items-center" href="#">
+                                        <span class="material-icons ">
+                                            chevron_right
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- 頁數結束 -->
+                    </section>
+                   
+                </div>
+                <!-- 右欄結束 -->
+            </div>
+        </div>
+    </main>
+    <!-- <nav class="admin-sign p-3  border-0" >
+        <a class="btn btn-primary py-4 w-100 btn-signout text-white" data-bs-toggle="modal" data-bs-target="#mapModal" id="btn">地圖搜尋</a>
+    </nav> -->
+    
+    
+    <footer class="index-footer py-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h4><a href="index.html">doorway</a></h4>
+                    <p class="p-title mb-8">與我們一起環遊世界</p>
+                    <p class="p-public"><small>© DOORWAY Inc. All Rights Reserved.</small></p>
+                </div>
+                <div class="col-lg-8 ">
+                    <nav class="d-flex justify-content-between">
+                        <div>
+                            <h4 class="mb-4">目的地</h4>
+                            <ul class="">
+                                <li class="mb-3"><a href="">國家</a></li>
+                                <li class="mb-3"><a href="">地區</a></li>
+                                <li class="mb-3"><a href="">城市</a></li>
+                                <li class="mb-3"><a href="">景點</a></li>
+                                <li><a href="">青年旅館</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="mb-4">住宿類型</h4>
+                            <ul class="">
+                                <li class="mb-3"><a href="">民宿</a></li>
+                                <li class="mb-3"><a href="">公寓</a></li>
+                                <li class="mb-3"><a href="">渡假村</a></li>
+                                <li class="mb-3"><a href="">Villa</a></li>
+                                <li><a href="">青年旅館</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="mb-4">服務</h4>
+                            <ul class="">
+                                <li class="mb-3"><a href="">出租房源</a></li>
+                                <li class="mb-3"><a href="">租車</a></li>
+                                <li class="mb-3"><a href="">訂機票</a></li>
+                                <li class="mb-3"><a href="">餐廳訂位</a></li>
+                                <li><a href="">資源中心</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="mb-4">關於我們</h4>
+                            <ul class="">
+                                <li class="mb-3"><a href="">客服中心</a></li>
+                                <li class="mb-3"><a href="">常見問題</a></li>
+                                <li class="mb-3"><a href="">隱私權政策</a></li>
+                                <li class="mb-3"><a href="">Cookie政策</a></li>
+                                <li><a href="">服務條款</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="top">
+        <a href="" class="d-flex align-items-center  justify-content-center"><span class="material-icons">north</span></a>
+    </div>
+    <!-- 地圖開始 -->
+    <div class="map-img  mb-7">
+        <a href="" data-bs-toggle="modal" data-bs-target="#mapModal" id="btn">
+    
+        </a>
+    </div>
+    <!-- 地圖結束 -->
+    <!-- 地圖Modal開始 -->
+    <div class="modal mapModal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="row row-cols-1  row-cols-md-4 g-1">
+                        <div class="col">
+                            <label for="" class="where  ">
+                                <input class="form-control py-4 fw-normal" type="text" placeholder="你要去哪裡？">
+                            </label>
+                        </div>
+                        <div class="col col-date">
+                            <label for="" class="where date  ">
+                                <input class="form-control py-4 fw-normal" type="text" placeholder="入住 ─ 退房">
+                            </label>
+                        </div>
+                        <div class="col col-person">
+                            <label for="" class="where person ">
+                                <input class="form-control py-4 fw-normal" type="text" placeholder="新增人數">
+                            </label>
+                        </div>
+                        <div class="col">
+                            <a
+                                class=" btn btn-primary py-4  btn-search  h-100 d-flex align-items-center justify-content-center">
+                                <span class="material-icons">search</span>
+                            </a>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="map" class="product-map">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 地圖Modal結束 -->
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d10d055091.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    
+    <script src="js/all.js"></script>
+    <script>
+        //product的地圖 pc
+            document.querySelector('#btn').onclick = function () { //圖片滿版
+                document.getElementById('mapModal').style.display = 'block';
+                setTimeout(function () {
+                    map.invalidateSize();
+                }, 100);
+            }
+
+
+            var map = L.map('map', {
+                center: [41.0258759, 28.9701692],
+                zoom: 16
+            });
+
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            var greenIcon = new L.Icon({
+                    iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+                    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+                    iconSize: [25, 41],
+                    iconAnchor: [12, 41],
+                    popupAnchor: [1, -34],
+                    shadowSize: [41, 41]
+                });
+                
+                //設data裡面有兩個物件，卑南文化公園、台東火車站
+                    //一個地點就是一個物件
+                    var data = [
+                        {
+                            'name': 'Walton Hotels Galata',
+                            'oldmask': '4.8(239)',
+                            'childmask': '4 星級飯店',
+                            lat: 41.0258759,
+                            lng: 28.9701692
+                        },
+                         {
+                            'name': 'Allegra Suit Galata',
+                            'oldmask': '4.3(125)',
+                            'childmask': '3 星級飯店',
+                            lat: 41.026097, 
+                            lng: 28.9709403
+                        },
+                         {
+                            'name': 'DORUK PALAS HOTEL',
+                            'oldmask': '4.5(423)',
+                            'childmask': '5 星級飯店',
+                            lat: 41.0267181, 
+                            lng: 28.9683233
+                        },
+                         {
+                            'name': 'Galateia Residence',
+                            'oldmask': '4.5(423)',
+                            'childmask': '5 星級飯店',
+                            lat: 41.0281752, 
+                            lng: 28.9736825
+                        },
+                         {
+                            'name': 'Selvese Collection Hotel',
+                            'oldmask': '4.5(423)',
+                            'childmask': '5 星級飯店',
+                            lat: 41.0264569,
+                            lng: 28.9758322
+                        },
+                         {
+                            'name': 'Novotel Istanbul Bosphorus',
+                            'oldmask': '4.5(423)',
+                            'childmask': '5 星級飯店',
+                            lat: 41.0247737,
+                            lng: 28.9779183
+                        },
+                         {
+                            'name': 'Port Hotel Tophane-i Amire',
+                            'oldmask': '4.5(423)',
+                            'childmask': '5 星級飯店',
+                            lat: 41.0259417, 
+                            lng: 28.9779803
+                        },
+                        {
+                            'name': 'Nova Plaza Pera',
+                            'oldmask': '4.5(423)',
+                            'childmask': '5 星級飯店',
+                            lat: 41.031047, 
+                            lng: 28.967718
+                        },
+                        {
+                            'name': 'The Galataport Hotel',
+                            'oldmask': '4.5(328)',
+                            'childmask': '4 星級飯店',
+                            lat: 41.0253591, 
+                            lng: 28.9707413
+                        }
+                    ]
+
+
+                    //跑for迴圈，地圖加入標籤，照原本格式寫
+                    for (var i = 0; data.length > i; i++) {
+                        L.marker([data[i].lat, data[i].lng], { icon: greenIcon }).addTo(map)
+                            .bindPopup('<h5>' + data[i].name + '</h5><p>' + data[i].oldmask + '<br>' + data[i].childmask + '</p>')
+                        
+                    }
+
+    </script>
+
+</body>
+
+</html>
