@@ -1,0 +1,340 @@
+// 表頭開始
+.admin-header{
+    display: none;
+    @include iphone{
+        display: block;
+    }
+}
+// 表頭結束
+
+// 手機導覽列開始
+.admin-asideMobile{
+    display:none;
+    margin-bottom: 32px;
+    @include iphone{
+        display: block;
+    }
+    li a{
+        background: rgba($warning,.6);
+        display: block;
+        padding: 20px 14px !important;
+    }
+    li a.active{
+        background: rgba($secondary,.6);
+    }
+}
+// 手機導覽列結束
+
+
+
+// 左側選單開始
+.admin-main{
+    border:none;
+    @include iphone{
+        padding: 0px !important;
+    }
+    @include iphone{
+        margin-top: 66px;
+        margin-bottom: 32px !important;
+    }
+    h2{
+        @include iphone{
+            display: none;
+        }
+     }
+    .row{
+        position: relative;
+        
+    }
+    .col-md-3{
+        @include iphone{
+        display: none !important;
+    }
+    }
+    .admin-aside{
+        position: fixed;
+        top: 0;
+        width:300px ;
+        @include pad{
+            width: 216px;
+        }
+        @include padPro{
+            width: 208px;
+        }
+       
+        @include iphone{
+            display: none;
+          
+        }
+        .pic{
+            background: url(../img/nav.jpg)no-repeat;
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-position: center center;
+            background-size: cover;
+            border-radius: 100%;
+	    }
+        
+        h5{
+            font-size: $font-16;
+        }
+        p{
+            font-size: $font-14;
+        }
+        li{
+            border-radius: 0.25rem !important;
+        }
+        li a{
+            padding: 16px 0px;
+            
+        }
+        li:hover{
+            a{
+                margin-left: 8px;
+            }
+            background: rgba($secondary,.6);
+        }
+    }
+    .admin-customer{
+        box-shadow: 0px 2px 10px rgba($primary,0.15);
+        @include pad{
+            padding: 32px !important;
+        }
+        @include iphone{
+            box-shadow: 0px 0px 0px rgba($primary,0.15);
+            padding: 0px !important;
+        }    
+    }
+    .customer .input-dash{
+        border: 4px dashed $secondary;
+    }
+    
+    .eye .pic{
+        background: url(../img/p1.jpg)no-repeat;
+        @include imgBg;
+        width: 140px;
+        height: 140px;
+        border-radius:0.25rem;
+
+    }
+    .card{
+        @include resetCard;
+    }
+    .order-card{
+        @include pad{
+            padding-right: 16px !important;
+        }
+        .txt{
+            @include pad{
+                flex-direction: column;
+                align-items: flex-start !important;
+                margin-left: 16px !important;
+            }
+        }
+        .btn{
+            @include pad{
+                padding: 16px !important;
+            }
+            @include iphone{
+                display: none !important;
+            }
+        }
+        .btn-arrow{
+            display: none;
+            @include iphone{
+                display: block;
+            }
+        }
+        h5{
+            @include pad{
+                font-size: $font-16;
+            }
+        }
+        
+        .img-1{
+            background: url(../img/procuct1.jpg)no-repeat;
+            @include imgBg;
+            width: 220px;
+            height: 140px;
+            overflow: hidden;
+            &:hover{
+                 @include imgHover;
+            }
+            
+        }
+        .img-2{
+            background: url(../img/procuct2.jpg)no-repeat;
+            @include imgBg;
+            width: 220px;
+            height: 140px;
+            overflow: hidden;
+            &:hover{
+                 @include imgHover;
+            }
+        }
+        .img-3{
+            background: url(../img/procuct3.jpg)no-repeat;
+            @include imgBg;
+            width: 220px;
+            height: 140px;
+           overflow: hidden;
+            &:hover{
+                 @include imgHover;
+            }
+           
+        }
+        .img-4{
+            background: url(../img/procuct4.jpg)no-repeat;
+            @include imgBg;
+            width: 160px;
+            height: 140px;
+            overflow: hidden;
+            &:hover{
+                 @include imgHover;
+            }
+            @include pad{
+                width: 100%;
+                margin-bottom: 16px !important;
+            }
+            @include iphone{
+                height: 208px;
+            }
+        }
+        .img-5{
+            background: url(../img/procuct5.jpg)no-repeat;
+            @include imgBg;
+            width: 160px;
+            height: 140px;
+            overflow: hidden;
+            &:hover{
+                 @include imgHover;
+            }
+            @include pad{
+                width: 100%;
+                margin-bottom: 16px !important;
+            }
+            @include iphone{
+                height: 208px;
+            }
+        }
+        .img-6{
+            background: url(../img/procuct6.jpg)no-repeat;
+            @include imgBg;
+            width: 160px;
+            height: 140px;
+            overflow: hidden;
+            &:hover{
+                 @include imgHover;
+            }
+            @include pad{
+                width: 100%;
+                margin-bottom: 16px !important;
+            }
+            @include iphone{
+                height: 208px;
+            }
+        }
+        .p-date{
+            font-size: $font-12;
+            color:$success;
+        }
+        
+    }
+    .eva-card{
+        @include pad{
+            padding-right: 0 !important;
+            padding-bottom: 24px !important;
+        }
+        .col-lg-5{
+            @include pad{
+                flex-direction: column;
+                align-items: flex-start !important;
+            }
+        }
+        .col-lg-7{
+            .box{
+                @include pad{
+                padding: 0px 16px !important;
+                }
+            }
+        }
+    }
+    .favorite-section{
+        h5{
+            @include padPro{
+                font-size: $font-16;
+            }
+        }
+        p{
+            @include padPro{
+                font-size: $font-14;
+                margin-bottom: 0;
+            }
+        }
+        .material-icons{
+            @include padPro{
+                font-size: $font-16;
+            }
+        }
+        .score{
+            @include padPro{
+                font-size: $font-12;
+                padding: 6px !important;
+            }
+        }
+    }
+    .profile-section{
+        .customer{
+            @include pad{
+                padding: 32px !important;
+            }
+        }
+    }
+    .th-verified{
+        @include iphone{
+            display: none;
+        }
+    }
+}
+// 左側選單結束
+.admin-sign{//底部按鈕固定
+    display: none !important;
+    position: fixed;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background: $white;
+    padding: 12px !important;
+    // z-index: 50 !important;
+    
+    @include iphone{
+        display: flex !important;
+    }
+}
+.mail-modal-footer{
+    @include iphone{
+        .btn{
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+            width: 47.5% !important;
+        }
+    }
+    
+}
+.eye-box{
+    @include iphone{
+        justify-content: space-between !important;
+        width: 100% !important;
+    }
+     @include iphone{
+        .btn{
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+            width: 100% !important;
+        }
+    }
+
+}
+
+

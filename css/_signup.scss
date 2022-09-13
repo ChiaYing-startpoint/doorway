@@ -1,0 +1,87 @@
+.sign-banner{
+    .bg-banner{
+        background: url(../img/log-banner.jpg)no-repeat;
+        @include imgBg;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        @include padPro{
+            background: url(../img/sign-pad.jpg)no-repeat;
+            @include imgBg;
+        }
+    }
+}
+.sign-form{
+    z-index: 2;
+    @include padPro{
+       padding-top: 180px !important;
+       color:rgba($white,.87)  !important;
+    }
+    @include iphone{
+        padding-top: 88px !important;
+        
+    }
+    .form-control{
+        @include padPro{
+            background:rgba($white,.2) !important;
+        }
+    }
+    
+}
+.sign-social{
+    li a{
+        display: block;
+        width: 56px;
+        height: 56px;
+        border:1px solid rgba($primary,0.5);
+        background: white;
+        line-height: 4;
+        border-radius: 50%;
+        &:hover{
+            background: $warning;
+        }
+    }
+    .fa-facebook-f{
+        color:#3A589B;
+    }
+    .fa-google{
+        color:#DC4E41 ;
+    }
+    .fa-apple{
+        color: #4C4C4C;
+    }
+    p{
+        position: relative;
+    }
+    p::before{
+        content: '';
+        background: rgba($primary,0.5);
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 35%;
+        height: 1px;
+        top:50%;
+        @include pad{
+            background: rgba($white,0.5);
+            width: 30%;
+        }
+    }
+    p::after{
+        content: '';
+        background: rgba($primary,0.5);
+        display: block;
+        position: absolute;
+        right: 0;
+        width: 35%;
+        height: 1px;
+        top:50%;
+        @include pad{
+            background: rgba($white,0.5);
+            width: 30%;
+        }
+    }
+}

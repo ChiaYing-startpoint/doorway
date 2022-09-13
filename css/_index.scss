@@ -1,0 +1,292 @@
+.index-main{
+     img{
+        width: 100% !important; 
+        height: 100% !important;
+        vertical-align: middle !important;
+        object-fit: cover !important;
+    }
+
+}
+
+
+.index-header{
+    .pic{
+        background: url(../img/nav.jpg)no-repeat;
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-position: center center;
+        background-size: cover;
+        border-radius: 100%;
+	}
+    h5{
+        font-size: $font-14;
+    }
+}
+
+// banner開始
+.index-banner {
+    background-image: url('../img/index-banner.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    h2 {
+        font-size: $font-56;
+        margin-bottom: 12px !important;
+
+        @include iphone {
+            font-size: $font-32;
+        }
+    }
+    p {
+        font-size: $font-20;
+
+        @include iphone {
+            font-size: $font-12;
+        }
+    }
+    .index-btn {
+        width: 240px;
+        margin-left: 8px;
+        @include pad {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+    .list-group-item.active {
+        z-index: 1 !important;
+    }
+}
+// banner結束
+
+.index-discount{
+   
+    h3{
+        font-size: $font-32;
+    }
+    .card{
+        .card-text{
+            font-size: $font-14;
+        }
+    }
+}
+// 探索住宿開始
+.index-stay{
+   background: $warning;
+   .col-12{
+       @include iphone{
+           padding-right: 0px !important;
+       }
+   }
+    h3{
+        font-size: $font-32;
+    }
+    .card{
+         h5{
+            @include iphone{
+                font-size: $font-16;
+            }
+        }
+        p{
+            @include iphone{
+                font-size: $font-14;
+            }
+        }
+        .score{
+            @include iphone{
+                font-size: $font-12;
+                padding: 6px !important;
+            }
+        }
+        .material-icons{
+            @include iphone{
+                font-size: $font-16;
+            }
+        }
+        
+    }
+    .card-small{
+        h5{
+            @include pad{
+                font-size: $font-16;
+            }
+        }
+        p{
+            @include pad{
+                font-size: $font-14;
+            }
+        }
+        .score{
+            @include pad{
+                font-size: $font-12;
+                padding: 6px !important;
+            }
+        }
+        .material-icons{
+            @include pad{
+                font-size: $font-16;
+            }
+        }
+    }
+}
+// 探索住宿結束
+// 推薦景點開始
+.index-view{
+    .row{
+        @include iphone{
+            margin-bottom: 0 !important;
+        }
+    }
+    .card{
+        border:none !important;
+        position:relative;
+        .img{
+            z-index: -1;
+        }
+        @include iphone{
+            margin-bottom: 12px !important;
+        }
+    }
+    h5{
+        @include iphone{
+            font-size: $font-16;
+        }
+    }
+    p{
+        @include iphone{
+            font-size: $font-12;
+        }
+    }
+    
+    .card:hover{
+        .img{
+            @include imgHover;
+        }
+    }
+   .img-1{
+       background: url('../img/view1.jpg')no-repeat;
+       @include imgBg;
+       height: 400px;
+       @include pad{
+           height: 290px;
+       }
+       @include iphone{
+           height: 133px;
+       }
+   } 
+   .img-2{
+       background: url('../img/view2.jpg')no-repeat;
+       @include imgBg;
+       height: 187px;
+       @include pad{
+           height: 133px;
+       }
+   } 
+   .img-3{
+       background: url('../img/view3.jpg')no-repeat;
+       @include imgBg;
+       height: 187px;
+       @include pad{
+           height: 133px;
+       }
+   } 
+   .img-4{
+       background: url('../img/view4.jpg')no-repeat;
+       @include imgBg;
+       height: 400px;
+        @include pad{
+           height: 290px;
+       }
+        @include iphone{
+           height: 133px;
+       }
+   } 
+   .img-5{
+       background: url('../img/view5.jpg')no-repeat;
+       @include imgBg;
+       height: 400px;
+        @include pad{
+           height: 290px;
+       }
+        @include iphone{
+           height: 133px;
+       }
+   } 
+    .card-body{
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+    }
+}
+// 推薦景點結束
+// 熱門目的開始
+.index-location{
+    .item{
+        position:relative;
+        img{
+            z-index: -1;
+        }
+        .txt{
+            position: absolute;
+            left: 0;
+            top:0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background:rgba($primary,0);
+           h5{
+               opacity: 0;
+               @include iphone{
+                   font-size: $font-16;
+               }
+           }
+        }
+        .txt-5{
+            background:rgba($info,.6);
+            h5{
+                opacity: 1;
+            }
+        }
+    }
+    .item:hover{
+        .txt{
+            background:rgba($primary,0.38);
+            h5{
+                opacity: 1;
+            }
+        }
+        .txt-5{
+            background:rgba($info,.87);
+            h5{
+                border-bottom: 1px solid $white;
+            }
+        }
+    }
+}
+// 熱門目的結束
+// 立即登入開始
+.index-signin{
+    background: $info;
+    h2{
+        font-size: $font-48;
+        @include pad{
+            font-size: $font-32;
+            margin-bottom: 32px !important;
+        }
+        @include iphone{
+            font-size: $font-24;
+            margin-bottom: 24px !important;
+        }
+    }
+    button{
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+    }
+}
+// 立即登入結束
+
+
+.swiper-container {
+  width:100%;
+  height: 100%;
+}

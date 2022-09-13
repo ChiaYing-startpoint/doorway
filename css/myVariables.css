@@ -1,0 +1,25 @@
+.text-op38 {
+  opacity: 0.38;
+}
+
+.text-op40 {
+  opacity: 0.4;
+}
+
+.text-op60 {
+  opacity: 0.6;
+}
+
+.text-op87 {
+  opacity: 0.87;
+}
+
+ul, li {
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+}
+
+.border-4 {
+  border-radius: 10px !important;
+}/*# sourceMappingURL=myVariables.css.map */

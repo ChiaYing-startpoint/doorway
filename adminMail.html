@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.css">
+
+    <title>個人中心-訊息通知</title>
+</head>
+
+<body>
+    <!-- 表頭開始 -->
+    <header class="admin-header index-header admin-fixed-header ">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-6">
+                    <h1 class="mb-0"><a href="index.html">doorway</a></h1>
+                </div>
+                <div class="col-6">
+                    <ul class="navbar d-flex  justify-content-end">
+                        <li class=" me-3 ">
+                            <select class="  fw-light text-primary rounded-pill border-0">
+                                <option selected>TWD</option>
+                                <option value="1">JPY</option>
+                                <option value="2">EUR</option>
+                                <option value="3">USD</option>
+                            </select>
+                        </li>
+                        <li class="text-hover me-2"><a href="publish.html">刊登旅宿</a></li>
+                        <li class="user user-hover ">
+                            <a href="" class="d-flex align-items-center " data-bs-toggle="dropdown" data-bs-display="static"
+                                aria-expanded="false">
+                                <div class="pic ">
+                                </div>
+                                <div class="txt ms-2">
+                                    <h5 class="mb-0">Chia Ying</h5>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item  d-flex align-items-center py-3" href="#">
+                                        <span class="material-icons me-3 ">
+                                            mark_email_unread
+                                        </span>
+                                        訊息通知
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center py-3" href="#">
+                                        <span class="material-icons me-3 ">
+                                            description
+                                        </span>
+                                        管理訂單
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center py-3" href="#">
+                                        <span class="material-icons me-3 ">
+                                            grade
+                                        </span>
+                                        住宿評語
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center py-3" href="#">
+                                        <span class="material-icons me-3 ">
+                                            favorite
+                                        </span>
+                                        心願清單
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center py-3" href="#">
+                                        <span class="material-icons me-3 ">
+                                            account_circle
+                                        </span>
+                                        個人資料
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center py-3 " href="#">
+                                        <span class="material-icons me-3">
+                                            person_add
+                                        </span>
+                                        註冊
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center py-3" href="#">
+                                        <span class="material-icons me-3">
+                                            login
+                                        </span>
+                                        登入
+                                    </a>
+                                </li>
+                            </ul>
+    
+                        </li>
+                        <!-- 漢堡選單開始 -->
+                        <li class="hamburger ">
+                            <a class="d-flex align-items-center justify-content-end">
+                                <span class="material-icons-outlined">
+                                    dehaze
+                                </span>
+                            </a>
+                            <!-- 選單內容開始 -->
+                            <div class="ham-card bg-white px-1 ">
+                                <hr class="my-0 mb-3">
+                                <div class="ham-body ">
+                                    <a href="adminMail.html" class="d-flex align-items-center">
+                                        <span class="material-icons-outlined me-3">mark_email_unread</span>訊息通知
+                                    </a>
+                                    <a href="adminOrder.html" class="d-flex align-items-center">
+                                        <span class="material-icons-outlined me-3">article</span>管理訂單
+                                    </a>
+                                    <a href="adminEvaluation.html" class="d-flex align-items-center">
+                                        <span class="material-icons-outlined me-3">star_border_purple500</span>住宿評語
+                                    </a>
+                                    <a href="adminFavorite.html" class="d-flex align-items-center">
+                                        <span class="material-icons-outlined me-3">favorite_border</span>心願清單
+                                    </a>
+                                    <a href="adminProfile.html" class="d-flex align-items-center">
+                                        <span class="material-icons-outlined me-3">person_outline</span>個人資料
+                                    </a>
+                                    <hr>
+                                    <a href="" class="d-flex align-items-center">
+                                        <span class="material-icons-outlined me-3">language</span>語系
+                                    </a>
+                                    <a href="publish.html" class="d-flex align-items-center">
+                                        <span class="material-icons-outlined me-3">home</span>刊登旅宿
+                                    </a>
+                                    <hr>
+                                    <a href="signup.html" class="d-flex align-items-center">
+                                        <span class="material-icons-outlined me-3">person_add</span>註冊
+                                    </a>
+                                    <a href="signup.html" class="d-flex align-items-center">
+                                        <span class="material-icons-outlined me-3">login</span>登入
+                                    </a>
+                        
+                        
+                                </div>
+                            </div>
+                            <!-- 選單內容結束 -->
+                        </li>
+                        <!-- 漢堡選單結束 -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 表頭結束 -->
+   
+    <main class="product-main admin-main px-4 ">
+        <div class="container-xxl">
+            <div class="row justify-content-end">
+                <!-- 左欄開始 -->
+                <div class="col-lg-3 ">
+                    <section class="product-aside admin-aside py-6  h-100">
+                        <h1 class="mb-8"><a href="index.html">doorway</a></h1>
+                        <div action="" class=" d-flex flex-column justify-content-between h-100 pb-64 pe-6">
+                            
+                            <ul class="welldown-list">
+                                <li class="d-flex mb-1">
+                                    <a href="adminMail.html" class=" d-flex align-items-center">
+                                        <span class="material-icons me-4 ">
+                                            mark_email_unread
+                                        </span>
+                                        <h6 class="mb-0 ">訊息通知</h6>
+                                    </a>
+                                </li>
+                                <li class="d-flex mb-1">
+                                    <a href="adminOrder.html" class=" d-flex  align-items-center">
+                                        <span class="material-icons me-4 ">
+                                            description
+                                        </span>
+                                        <h6 class="mb-0 ">管理訂單</h6>
+                                    </a>
+                                </li>
+                                <li class="d-flex mb-1">
+                                    <a href="adminEvaluation.html" class=" d-flex align-items-center  ">
+                                        <span class="material-icons me-4 ">
+                                            grade
+                                        </span>
+                                        <h6 class="mb-0 ">住宿評語</h6>
+                                    </a>
+                                </li>
+                                <li class="d-flex mb-1 ">
+                                    <a href="adminFavorite.html" class=" d-flex align-items-center">
+                                        <span class="material-icons me-4 ">
+                                            favorite
+                                        </span>
+                                        <h6 class="mb-0 ">心願清單</h6>
+                                    </a>
+                                </li>
+                                <li class="d-flex  ">
+                                    <a href="adminProfile.html" class=" d-flex align-items-center ">
+                                        <span class="material-icons me-4 ">
+                                            account_circle
+                                        </span>
+                                        <h6 class="mb-0 ">個人資料</h6>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="user d-flex">
+                                <div class="pic ">
+                                </div>
+                                <div class="txt ms-3">
+                                    <h5 class="mb-1">Chia Ying</h5>
+                                    <p class="mb-0">Ying5145@mail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- 左欄結束 -->
+                <!-- 右欄開始 -->
+                <div class="col-md-8 col-lg-9 ml-auto">
+                    <section class="pt-6 pb-80">
+                        <h2 class="mb-6">訊息通知</h2>
+                        <table class="table ">
+                            <thead>
+                                <tr>
+                                    <th scope="col col-vertical " ><div class="d-flex">ID<span class="material-icons ms-1">
+                                        arrow_downward
+                                    </span></div></th>
+                                    <th scope="col " width="250">Name</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col" class="th-verified">Verified</th>
+                                    <th scope="col" class="th-material"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="">
+                                    <th scope="row">#1</th>
+                                    <td class="text-danger fw-bolder">Uber Eats</td>
+                                    <td>emir.wicks@mail.com</td>
+                                    <td class="th-verified">Yes</td>
+                                    <td class="text-end text-middle">
+                                        <a href="" class="" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="material-icons">
+                                                visibility
+                                            </span></a>
+                                        <a href="" class="ms-4" data-bs-toggle="modal" data-bs-target="#exampleModal2"><span
+                                                class="material-icons ">
+                                                create
+                                            </span></a>
+                                    </td>
+                                </tr>
+                                <!-- add new admin Modal開始 -->
+                                <div class="edit-modal addnew-modal modal fade" id="exampleModal3" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-scrollable">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title fw-bold" id="exampleModalLabel">New Admin</h4>
+                                                <button type="button " class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body pb-5">
+                                                <form action="">
+                                                    <h5 class=" my-3 mt-4 fw-bold">Account</h5>
+                                                    <div class="mb-3">
+                                                        <label for="Name" class="form-label mb-0">Name</label>
+                                                        <input type="text" class="form-control input-outline" id="Name"
+                                                            placeholder="Emir Wicks">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="Email" class="form-label mb-0">Email</label>
+                                                        <input type="email" class="form-control input-outline" id="Email"
+                                                            placeholder="emir.wicks@mail.com">
+                                                    </div>
+                                                    <hr>
+                                                    <h5 class=" my-3 mt-4 fw-bold">Verification</h5>
+                                                    <div class=" d-flex align-items-center justify-content-between mb-3">
+                                                        <div class="d-flex align-items-center fw-bold">
+                                                            <span class="material-icons me-2 text-danger">
+                                                                report_problem
+                                                            </span>unverified
+                                                        </div>
+                                                        <time>2020/4/12</time>
+                                                    </div>
+                                                    <button type="button" class="btn btn-outline-secondary w-100 disabled button-p">Send
+                                                        Verification
+                                                        Mail</button>
+                                                    <hr>
+                                                    <h5 class=" my-3 mt-4 fw-bold">Access Level</h5>
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected>Admin</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                    <hr>
+                                                    <h5 class=" my-3 mt-4 fw-bold">Custom Access</h5>
+                                                    <div class="check">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                                lecture
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                                            <label class="form-check-label" for="flexCheckChecked">
+                                                                Coupon
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                                Message
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                                Setting
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                                task menu
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer ">
+                                                <button type="button" class="btn btn-secondary px-4 btn-cancel"
+                                                    data-bs-dismiss="modal">Cancel</button>
+                                                <button type="button" class="btn btn-primary px-4 btn-update">Add</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- add new admin Modal結束 -->
+                        
+                                <!--edit Modal 開始 -->
+                                <div class="edit-modal modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-scrollable">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title fw-bold" id="exampleModalLabel">Edit Admin</h4>
+                                                <button type="button " class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body pb-5">
+                                                <form action="">
+                                                    <h5 class=" my-3 mt-4 fw-bold">Account</h5>
+                                                    <div class="mb-3  input-style">
+                                                        <label for="Name" class="form-label mb-0">Name</label>
+                                                        <input type="text" class="form-control py-4" id="Name" placeholder="Emir Wicks">
+                                                    </div>
+                                                    <div class="mb-3 input-style">
+                                                        <label for="Email" class="form-label mb-0">Email</label>
+                                                        <input type="email" class="form-control  py-4" id="Email" placeholder="emir.wicks@mail.com">
+                                                    </div>
+                                                    <hr>
+                                                    <h5 class=" my-3 mt-4 fw-bold">Verification</h5>
+                                                    <div class=" d-flex align-items-center justify-content-between mb-3">
+                                                        <div class="d-flex align-items-center fw-bold">
+                                                            <span class="material-icons  me-2 check_circle ">
+                                                                check_circle
+                                                            </span>Verified
+                                                        </div>
+                                                        <time>2020/4/12</time>
+                                                    </div>
+                                                    <button type="button" class="btn btn-outline-secondary py-4 w-100 disabled button-p">Send
+                                                        Verification Mail</button>
+                                                    <hr>
+                                                    <h5 class=" my-3 mt-4 fw-bold">Access Level</h5>
+                                                    <div class="select-style ">
+                                                        <select class="form-select  py-4" aria-label="Default select example">
+                                                            <option selected>Admin</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                    <hr>
+                                                    <h5 class=" my-3 mt-4 fw-bold">Custom Access</h5>
+                                                    <div class="check">
+                                                        <div class="form-check nput-style">
+                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                                lecture
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                                            <label class="form-check-label" for="flexCheckChecked">
+                                                                Coupon
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                                Message
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                                Setting
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                                task menu
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <h5 class=" my-3 mt-4 fw-bold">Deactivate Account</h5>
+                                                    <div class="d-flex align-items-center mb-3 text-danger">
+                                                        <span class="material-icons me-2 text-danger">
+                                                            report_problem
+                                                        </span>This cannot be undone!
+                                                    </div>
+                                                    <button type="button" class="btn btn-outline-danger w-100 py-4 button-p fw-bold">Deactivate This
+                                                        Account</button>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer  mail-modal-footer w-100">
+                                                <button type="button" class="btn btn-secondary px-6  py-4  btn-cancel"
+                                                    data-bs-dismiss="modal">取消</button>
+                                                <button type="button" class="btn btn-primary py-4 px-6  btn-update">更新</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--edit Modal 結束 -->
+                        
+                                <!-- eye Modal開始 -->
+                                <div class=" eye modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content ">
+                                            <div class=" modal-body">
+                                                <div class="item d-flex h-100  ">
+                                                    <div class="pic w-50  "></div>
+                                                    <div class="txt ms-4 w-100   ">
+                                                        <div class="d-flex justify-content-between ">
+                                                            <p>#1</p>
+                                                            <a href="" data-bs-dismiss="modal" aria-label="Close"><span
+                                                                    class="material-icons">clear
+                                                                </span></a>
+                                                        </div>
+                                                        <div class="">
+                                                            <p>Admin</p>
+                                                            <h5 class="mb-1">Emir Wicks</h5>
+                                                            <small>emir.wicks@mail.com</small>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between mm  ">
+                                                            <small class="badge">verified</small>
+                                                            <a href="" class="arrow">
+                                                                <span class="material-icons " dropdown-toggle" href="#"
+                                                                    id="navbarDarkDropdownMenuLink">
+                                                                    keyboard_arrow_down</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer " aria-labelledby="navbarDarkDropdownMenuLink">
+                                                <div class="d-flex justify-content-end eye-box ">
+                                                    <button type="button" class="btn btn-secondary py-4 px-6" data-bs-dismiss="modal">取消</button>
+                                                    <button type="button" class="btn btn-primary ms-3 py-4 px-6">編輯</button>
+                                                </div>
+                        
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- eye Modal結束 -->
+                                <tr class="">
+                                    <th scope="row">#2</th>
+                                    <td class="text-danger fw-bolder">Booking. com</td>
+                                    <td>emir.wicks@mail.com</td>
+                                    <td class="th-verified">Yes</td>
+                                    <td class="text-end text-middle">
+                                        <a href="" class="" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="material-icons">
+                                                visibility
+                                            </span></a>
+                                        <a href="" class="ms-4" data-bs-toggle="modal" data-bs-target="#exampleModal2"><span
+                                                class="material-icons ">
+                                                create
+                                            </span></a>
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <th scope="row">#3</th>
+                                    <td class="text-danger fw-bolder">Agoda Reminder</td>
+                                    <td>emir.wicks@mail.com</td>
+                                    <td class="th-verified">Yes</td>
+                                    <td class="text-end text-middle">
+                                        <a href="" class="" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="material-icons">
+                                                visibility
+                                            </span></a>
+                                        <a href="" class="ms-4 " data-bs-toggle="modal" data-bs-target="#exampleModal2"><span
+                                                class="material-icons ">
+                                                create
+                                            </span></a>
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <th scope="row">#4</th>
+                                    <td class="text-danger fw-bolder">Uber Eats</td>
+                                    <td>emir.wicks@mail.com</td>
+                                    <td class="th-verified">Yes</td>
+                                    <td class="text-end text-middle">
+                                        <a href="" class="" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="material-icons">
+                                                visibility
+                                            </span></a>
+                                        <a href="" class="ms-4 " data-bs-toggle="modal" data-bs-target="#exampleModal2"><span
+                                                class="material-icons ">
+                                                create
+                                            </span></a>
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <th scope="row">#5</th>
+                                    <td class="text-danger fw-bolder">Booking. com</td>
+                                    <td>emir.wicks@mail.com</td>
+                                    <td class="th-verified">Yes</td>
+                                    <td class="text-end text-middle">
+                                        <a href="" class="" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="material-icons">
+                                                visibility
+                                            </span></a>
+                                        <a href="" class="ms-4 " data-bs-toggle="modal" data-bs-target="#exampleModal2"><span
+                                                class="material-icons ">
+                                                create
+                                            </span></a>
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <th scope="row">#6</th>
+                                    <td class="text-danger fw-bolder">Agoda Reminder</td>
+                                    <td>emir.wicks@mail.com</td>
+                                    <td class="th-verified">Yes</td>
+                                    <td class="text-end text-middle">
+                                        <a href="" class="" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="material-icons">
+                                                visibility
+                                            </span></a>
+                                        <a href="" class="ms-4 " data-bs-toggle="modal" data-bs-target="#exampleModal2"><span
+                                                class="material-icons ">
+                                                create
+                                            </span></a>
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <th scope="row">#7</th>
+                                    <td class="text-danger fw-bolder">Uber Eats</td>
+                                    <td>emir.wicks@mail.com</td>
+                                    <td class="th-verified">Yes</td>
+                                    <td class="text-end text-middle">
+                                        <a href="" class="" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="material-icons">
+                                                visibility
+                                            </span></a>
+                                        <a href="" class="ms-4 " data-bs-toggle="modal" data-bs-target="#exampleModal2"><span
+                                                class="material-icons ">
+                                                create
+                                            </span></a>
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <th scope="row">#8</th>
+                                    <td class="text-danger fw-bolder">Booking. com</td>
+                                    <td>emir.wicks@mail.com</td>
+                                    <td class="th-verified">Yes</td>
+                                    <td class="text-end text-middle">
+                                        <a href="" class="" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="material-icons">
+                                                visibility
+                                            </span></a>
+                                        <a href="" class="ms-4 " data-bs-toggle="modal" data-bs-target="#exampleModal2"><span
+                                                class="material-icons ">
+                                                create
+                                            </span></a>
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <th scope="row">#9</th>
+                                    <td class="text-danger fw-bolder">Agoda Reminder</td>
+                                    <td>emir.wicks@mail.com</td>
+                                    <td class="th-verified">Yes</td>
+                                    <td class="text-end text-middle">
+                                        <a href="" class="" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="material-icons">
+                                                visibility
+                                            </span></a>
+                                        <a href="" class="ms-4 " data-bs-toggle="modal" data-bs-target="#exampleModal2"><span
+                                                class="material-icons ">
+                                                create
+                                            </span></a>
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <th scope="row">#10</th>
+                                    <td class="text-danger fw-bolder">Uber Eats</td>
+                                    <td>emir.wicks@mail.com</td>
+                                    <td class="th-verified">Yes</td>
+                                    <td class="text-end text-middle">
+                                        <a href="" class="" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="material-icons">
+                                                visibility
+                                            </span></a>
+                                        <a href="" class="ms-4 " data-bs-toggle="modal" data-bs-target="#exampleModal2"><span
+                                                class="material-icons ">
+                                                create
+                                            </span></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                       
+                    </section>
+                </div>
+                <!-- 右欄結束 -->
+            </div>
+        </div>
+    </main>
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d10d055091.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/all.js"></script>
+
+
+</body>
+
+</html>

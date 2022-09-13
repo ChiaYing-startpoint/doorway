@@ -1,0 +1,450 @@
+// 標題開始
+.productDital-header{
+    position: relative;
+    padding: 20px 0px 0px 0px !important;
+    z-index: 2000 !important;
+    
+    @include iphone{
+        padding: 20px 0px !important;
+        margin-bottom: 32px !important;
+         box-shadow: 0 0px 28px rgba($primary,0.1);
+         
+    }
+    .search-room {
+        position: absolute;
+        right:0;
+        top:0;
+        height: 84px;
+        line-height: 5;
+        padding: 0px 24px;
+        display: block;
+        background: $primary;
+        color:$white;
+        display: none;
+        @include pad{
+            display: block;
+        }
+        @include iphone{
+            display: none;
+        }
+    }
+    .dital-more{
+        display: none;
+        @include pad{
+        position: absolute;
+        display: block;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background:$primary ;
+        color: white;
+        height: 100%;
+        padding: 30px 16px;
+        }
+        @include iphone{
+            display: none;
+        }
+    }
+    .user{
+        @include pad{
+            margin-right: 80px !important;
+        }
+    }
+}
+.productDital-nav{
+    margin-top: 20px !important;
+    @include iphone{
+        margin-top: 0 !important;
+    }
+    li a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        position:relative;
+        font-size: $font-14;
+        @include iphone{
+            display: none;
+            
+        }
+    }
+    li a.active{
+        background: rgba($primary,.5);
+        
+}
+    
+    
+    li a::before{
+        content: '';
+        display: block;
+        position: absolute;
+        background: $white;
+        width: 1px;
+        height: 50%;
+        top:50%;
+        transform:translateY(-50%);
+    }
+    .last-line::after{
+       content: '';
+        display: block;
+        position: absolute;
+        background: $white;
+        width: 1px;
+        height: 50%;
+        right: 0;
+        top:50%;
+        transform:translateY(-50%); 
+    }
+}
+.productDital-title{
+    .material-icons{
+        font-size: $font-20;
+        color: #FF7973;
+    }
+    
+    h2 span{
+        @include iphone{
+            display: block;
+            margin-left: 0 !important;
+            font-size: $font-16;
+            margin-top: 8px !important;
+        }
+    }
+}
+// 標題結束
+.productDital-main{
+  
+    .breadcrumb{
+        @include iphone{
+             display: none;
+        }
+    }
+    .productDital-infomation{
+        overflow: hidden;
+        .col-lg-4{
+            @include pad{
+                display: none;
+            }
+        }
+        
+        .card:hover{
+            box-shadow: none !important;
+            .img{
+                overflow: hidden;
+            }
+            img{
+                @include imgHover;
+                }
+            }
+    }
+    .porductDital-banner{
+        
+        .desk-banner{
+            @include iphone{
+                display: none;
+            }
+        }
+        .mobile-banner{
+            display: none;
+            @include iphone{
+                display: block;
+            }
+        }
+          
+           img{
+            width: 100%;
+           }
+        
+        .img-1{
+            background:url('../img/productDital-banner1.jpg')no-repeat;
+            @include imgBg;
+            height: 400px;
+            border-radius: 10px 0px 0px 10px;
+            @include iphone{
+                 border-radius: 0px 0px 0px 0px;
+            }
+        }
+        .img-2{
+            background:url('../img/productDital-banner2.jpg')no-repeat;
+            @include imgBg;
+            height:128px;
+            border-radius: 0px 10px 0px 0px;
+            
+        }
+        .img-3{
+            background:url('../img/productDital-banner3.jpg')no-repeat;
+            @include imgBg;
+            height:128px;
+        }
+        .img-4{
+            background:url('../img/productDital-banner4.jpg')no-repeat;
+            @include imgBg;
+            height:128px;
+            border-radius: 0px 0px 10px 0px;
+            position:relative;
+            overflow: hidden;
+            .txt{
+                position: absolute;
+                width: 100%;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgba($info,.87);
+            }
+            &:hover{
+                .txt{
+                    background: rgba($info,.9);
+                }
+                a{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    
+    // 左欄開始
+    .stay-feature{ //住房特色
+        @include iphone{
+            margin-bottom: 48px !important;
+        }
+        
+        .card{
+            border-left: 14px solid $success;
+            .material-icons{
+                font-size: $font-32;
+                color: $secondary;
+            }
+        }
+    }
+    .introduction{
+        @include iphone{
+            margin-bottom: 48px !important;
+        }
+    }
+    // 空房情況開始
+    .vacant{
+        position: relative;
+        @include iphone{
+            padding: 48px 0px !important;
+            margin-bottom: 48px !important;
+        }
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            width:10000%;
+            left: -100%;
+            right:-100%;
+            top:0;
+            bottom: 0;
+            background: $warning;
+            z-index: -1;
+        }
+        .card{
+            @include iphone{
+                margin-bottom: 12px !important;
+            }
+        }
+        .card-body{
+            @include iphone{
+                flex-direction: column;
+                align-items: flex-start !important;
+            }
+           
+        }
+        .v-infomation{
+            @include iphone{
+                position: relative;
+                width: 100% !important;
+                padding-bottom: 20px !important;
+            }
+            a{
+                @include iphone{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+            }
+        }
+        h5{
+            @include iphone{
+                width: 100% !important;
+                text-align: right;
+                border-bottom: 1px solid  rgba($secondary,.6);
+                border-top: 1px solid rgba($secondary,.6);
+                padding: 20px 0px !important;
+            }
+        }
+        .style{
+            font-size: $font-14;
+        }
+        .amount{
+            @include iphone{
+                width: 100% !important;
+                padding-top: 20px !important;
+            }
+        }
+        .form-select{
+            @include iphone{
+                width: 100% !important;
+                margin-right: 12px !important;
+            }
+        }
+        .btn-booking{
+            width: 160px !important;
+            @include iphone{
+                width: 100% !important;
+            }
+        }
+
+    }
+    // 空房情況結束
+    // 設備服務開始
+    .equipment{
+         @include iphone{
+            margin-bottom: 48px !important;
+
+        }
+        .txt{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            
+        }
+        .txt p{
+            z-index: 1;
+        }
+        .txt::after{
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba($primary,.6);
+            mix-blend-mode: multiply; //ps色彩增值
+        }
+        .img{
+            overflow: hidden;
+        }
+        .img-1{
+            background:url('../img/equipment1.jpg')no-repeat;
+            @include imgBg;
+            height: 200px;
+            border-radius: 10px 0px 0px 0px;
+            @include iphone{
+                height: 140px;
+            }
+        }
+        .img-2{
+            background:url('../img/equipment2.jpg')no-repeat;
+            @include imgBg;
+            height: 200px;
+            border-radius: 0px 0px 0px 0px;
+             @include iphone{
+                height: 140px;
+                border-radius: 0px 10px 0px 0px;
+            }
+        }
+        .img-3{
+            background:url('../img/equipment3.jpg')no-repeat;
+            @include imgBg;
+            height: 200px;
+            border-radius: 0px 10px 0px 0px;
+             @include iphone{
+                height: 140px;
+                border-radius: 0px 0px 0px 0px;
+            }
+        }
+        .img-4{
+            background:url('../img/equipment4.jpg')no-repeat;
+            @include imgBg;
+            height: 200px;
+            border-radius: 0px 0px 0px 10px;
+             @include iphone{
+                height: 140px;
+                border-radius: 0px 0px 0px 0px;
+            }
+        }
+        .img-5{
+            background:url('../img/equipment5.jpg')no-repeat;
+            @include imgBg;
+            height: 200px;
+            border-radius: 0px 0px 0px 0px;
+             @include iphone{
+                height: 140px;
+                border-radius: 0px 0px 0px 10px;
+                
+            }
+        }
+        .img-6{
+            background:url('../img/equipment6.jpg')no-repeat;
+            @include imgBg;
+            height: 200px;
+            border-radius: 0px 0px 10px 0px;
+             @include iphone{
+                height: 140px;
+            }
+        }
+        
+       
+    }
+    // 設備服務結束
+    // 評價留言開始
+    .evaluation{
+        @include iphone{
+                margin-bottom: 48px !important;
+            }
+        .title{
+            @include iphone{
+                margin-bottom: 32px !important;
+            }
+        }
+        .progress{
+            width: 60%;
+            height: 8px;
+        }
+    }
+    // 評價留言結束
+    // 常見問題開始
+    .accordion-button:hover{
+        background:rgba($secondary,.6) !important;
+    }
+    // 常見問題結束
+    // 地圖開始
+   
+    .img-map{
+        border-radius: 10px;
+         z-index: 1 !important;
+    }
+    #ditalmap{
+        height: 400px;
+        
+    }
+
+    // 地圖結束
+    // 訂房須知開始
+    .notice{
+        @include iphone{
+            margin-bottom: 0 !important;
+        }
+        th{
+            width: 20%;
+            @include iphone{
+                width: 30%;
+            }
+        }
+    }
+    // 訂房須知結束
+}
+// 左欄結束
+
+

@@ -1,0 +1,172 @@
+// 表頭開始
+.index-header{
+    padding-top: 20px ;
+    padding-bottom: 20px;
+    h1 a{
+    background: url('../img/footer-logo.svg')no-repeat;
+    display:block;
+    width: 190px;
+    height: 21px;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+    @include iphone{
+        background: url('../img/logo-mobile.svg')no-repeat;
+        display:block;
+        width: 50px;
+        height: 24px;
+        
+    }
+    }  
+    h1 a:hover{
+        opacity: .87;
+    }
+    .navbar{
+       
+        .text-hover a{
+            display: block;
+            padding: 8px 12px;
+            border-radius: 24px;
+        }
+        .text-hover a:hover{
+            background: rgba($warning,.6);
+        }
+        .user{
+            @include iphone{
+                display: none;
+            }
+        }
+        .user-hover a{
+            display: block;
+            padding: 6px 12px;
+            border-radius: 24px;
+        }
+        .user-hover a:hover{
+            background: rgba($warning,.6);
+        }
+        .dropdown-item{
+             border-radius: 0px !important;
+        }
+        .dropdown-item:hover{
+            background: $success !important;
+        }
+    }
+    .navbar > li:nth-child(1),li:nth-child(2){
+            @include pad{
+                display: none;
+            }
+        }
+}
+
+// 漢堡選單開始
+.hamburger{
+    display: none;    
+    @include iphone{
+        display: block;
+    }
+    .ham-card{
+        position:fixed !important;
+        top:64px;
+        left: 0;
+        bottom:0;
+        width: 100% !important;
+        height: 100% !important;
+        height: 100vh;
+        left: -100%;
+        z-index: 3000 !important;
+        background: $white;
+        transition: all .45s;
+    }
+    .ham-card.active{
+        left: 0;
+    }
+    .ham-body a{
+        display: block;
+        padding: 16px 8px !important;
+    }
+    .ham-body a:active{
+        background: $secondary;
+        color:$white;
+    }
+    .ham-header a{
+       
+    }
+}
+// 漢堡選單結束
+.sign-header{
+    position: fixed;
+    width: 100%;
+     h1 a{
+    background: url('../img/logow.svg')no-repeat;
+    display:block;
+    width: 190px;
+    height: 21px;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+    }  
+}
+// 表頭結束
+// 表尾開始
+.index-footer{
+    @include iphone{
+        padding: 48px 0px !important;
+    }
+    h4 a{
+    background: url('../img/footer-logo.svg')no-repeat;
+    display:block;
+    width: 190px;
+    height: 21px;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+    } 
+    h4 a:hover{
+        opacity: .87;
+    } 
+    nav{
+        h4{
+            font-size: $font-16;
+        }
+        li a{
+            font-weight: 300;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    .col-lg-4{
+        @include iphone{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    } 
+    .col-lg-8{
+        @include pad{
+            display: none;
+        }
+    }
+    h4,.p-title{
+        @include pad{
+            display: none;
+        }
+    }
+    h4{
+        @include iphone{
+            display: block;
+        }
+    }
+    h4 a{
+        @include iphone{
+            text-align: center !important;
+        }
+        
+    }
+    .p-public{
+        @include pad{
+            text-align: center;
+        }
+    }
+}
+// 表尾結束

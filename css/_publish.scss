@@ -1,0 +1,166 @@
+.publish-header{
+    .sign-box{
+        @include pad{
+            display: block !important;
+        }
+        @include iphone{
+            display: none !important;
+        }
+    }
+}
+
+// banner開始
+.publish-main{
+    h3{
+        font-size: $font-32;
+    }
+}
+.publish-banner{
+    @include padPro{
+        padding-top: 184px !important;
+    }
+    @include pad{
+        padding-top: 96px !important;
+    }
+    @include iphone{
+        padding-top: 48px !important;
+    }
+    .col-xl-5{
+        @include iphone{
+            margin-bottom: 48px !important;
+        }
+    }
+    h2{
+    font-size: $font-56;
+    @include iphone{
+        font-size: $font-40;
+        margin-bottom: 16px !important;
+    }
+    }
+    .img-banner{
+        background: url(../img/publish-banner.svg)no-repeat;
+        @include imgBg;
+        height: 80vh;
+        @include padPro{
+            height: 60vh;
+        }
+        @include iphone{
+            height: 45vh;
+            
+        }
+    }
+}
+// banner結束
+// 提供服務開始
+.publish-serve{
+    @include iphone{
+        padding: 64px 0px !important;
+    }
+    .item{
+        @include pad{
+            display: flex !important;
+            align-items: center;
+            border-bottom: 4px dashed $warning;
+        }
+        @include iphone{
+            flex-direction: column;
+            border-bottom: 0px dashed $warning;
+            margin-bottom: 48px !important;
+        }
+    }
+    .item-3{
+        margin-bottom: 0 !important;
+    }
+    .img{
+        @include pad{
+            width: 100%;
+            padding-bottom: 0 !important;
+            margin-bottom: 0 !important;
+           
+            
+        }
+        @include iphone{
+            width: 90%;
+            border:4px dashed $warning;
+            border-radius: 10px 10px 0px 0px;
+            padding: 16px !important;
+            padding-bottom: 0 !important;
+            margin-bottom: 16px !important;
+        } 
+    }
+    .txt{
+        @include pad{
+            margin-left: 32px !important;
+        }
+        @include iphone{
+            margin-left: 0 !important;
+            padding: 0px 24px;
+        }
+    }
+    h5{
+        @include pad{
+            text-align: left !important;
+        }
+    }
+}
+// 提共服務結束
+// 四步驟開始
+.publish-step{
+    @include iphone{
+        padding: 64px 0px !important;
+    }
+    .col{
+        @include iphone{
+            margin-bottom: 12px !important;
+        }
+    }
+    .item{
+        border: 4px solid  rgba($secondary,.6);
+    }
+    p{
+        @include padPro{
+            font-size: $font-14 !important;
+        }
+    }
+}
+.case-item{
+    .img-1{
+        background: url(../img/case1.jpg)no-repeat;
+        @include imgBg;
+        height: 320px;
+        border-radius: 10px;
+        @include pad{
+            height: 256px;
+        }
+    }
+    .img-2{
+        background: url(../img/case2.jpg)no-repeat;
+        @include imgBg;
+        height: 320px;
+        border-radius: 10px;
+        @include pad{
+            height: 256px;
+        }
+    }
+    .img-3{
+        background: url(../img/case3.jpg)no-repeat;
+        @include imgBg;
+        height: 320px;
+        border-radius: 10px;
+        @include pad{
+            height: 256px;
+        }
+    }
+}
+// 四步驟結束
+    
+// 常見問題開始
+.accordion-button {
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+   
+}
+    
+// 常見問題結束

@@ -1,0 +1,44 @@
+$font-12:12px;
+$font-14:14px;
+$font-16:16px;
+$font-18:18px;
+$font-20:20px;
+$font-24:24px;
+$font-32:32px;
+$font-40:40px;
+$font-48:48px;
+$font-56:56px;
+$font-64:64px;
+$font-72:72px;
+
+// 文字透明度
+.text-op38{
+    opacity: .38;
+}
+.text-op40{
+    opacity: .4;
+}
+.text-op60{
+    opacity: .6;
+}
+.text-op87{
+    opacity: .87;
+}
+
+.bg-cus-white {
+    background: rgba($white, .4);
+}
+ul,li{
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+}
+// img{
+// 	width: 100% !important; 
+// 	height: 100% !important;
+// 	vertical-align: middle !important;
+//     object-fit: cover !important;
+// }
+.border-4{
+    border-radius: 10px !important; 
+}

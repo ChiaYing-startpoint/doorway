@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+
+    <link rel="stylesheet" href="css/all.css">
+    <title>訂房詳細頁</title>
+</head>
+
+<body>
+    <!-- 表頭開始 -->
+    <header class="fixed-header index-header productDital-header  ">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-6">
+                    <h1 class="mb-0"><a href="index.html">doorway</a></h1>
+                </div>
+                <div class="col-6">
+                    <ul class="navbar d-flex  justify-content-end">
+                        <li class=" me-3 ">
+                            <select class="  fw-light text-primary rounded-pill border-0">
+                                <option selected>TWD</option>
+                                <option value="1">JPY</option>
+                                <option value="2">EUR</option>
+                                <option value="3">USD</option>
+                            </select>
+                        </li>
+                        <li class="text-hover me-2"><a href="publish.html">刊登旅宿</a></li>
+                        <li class="user user-hover ">
+                            <a href="" class="d-flex align-items-center " data-bs-toggle="dropdown" data-bs-display="static"
+                                aria-expanded="false">
+                                <div class="pic ">
+                                </div>
+                                <div class="txt ms-2">
+                                    <h5 class="mb-0">Chia Ying</h5>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item  d-flex align-items-center py-3" href="adminMail.html">
+                                        <span class="material-icons me-3 ">
+                                            mark_email_unread
+                                        </span>
+                                        訊息通知
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center py-3" href="adminOrder.html">
+                                        <span class="material-icons me-3 ">
+                                            description
+                                        </span>
+                                        管理訂單
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center py-3" href="adminEvaluation.html">
+                                        <span class="material-icons me-3 ">
+                                            grade
+                                        </span>
+                                        住宿評語
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center py-3" href="adminFavorite.html">
+                                        <span class="material-icons me-3 ">
+                                            favorite
+                                        </span>
+                                        心願清單
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center py-3" href="adminProfile.html">
+                                        <span class="material-icons me-3 ">
+                                            account_circle
+                                        </span>
+                                        個人資料
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center py-3 " href="signup.html">
+                                        <span class="material-icons me-3">
+                                            person_add
+                                        </span>
+                                        註冊
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center py-3" href="signup.html">
+                                        <span class="material-icons me-3">
+                                            login
+                                        </span>
+                                        登入
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 漢堡選單開始 -->
+                        <li class="hamburger ">
+                            <a class="d-flex align-items-center justify-content-end">
+                                <span class="material-icons-outlined">
+                                    dehaze
+                                </span>
+                            </a>
+                            <!-- 選單內容開始 -->
+                            <div class="ham-card bg-white px-1 ">
+                                <hr class="my-0 mb-3">
+                                <div class="ham-body ">
+                                    <a href="adminMail.html" class="d-flex align-items-center">
+                                        <span class="material-icons-outlined me-3">mark_email_unread</span>訊息通知
+                                    </a>
+                                    <a href="adminOrder.html" class="d-flex align-items-center">
+                                        <span class="material-icons-outlined me-3">article</span>管理訂單
+                                    </a>
+                                    <a href="adminEvaluation.html" class="d-flex align-items-center">
+                                        <span class="material-icons-outlined me-3">star_border_purple500</span>住宿評語
+                                    </a>
+                                    <a href="adminFavorite.html" class="d-flex align-items-center">
+                                        <span class="material-icons-outlined me-3">favorite_border</span>心願清單
+                                    </a>
+                                    <a href="adminProfile.html" class="d-flex align-items-center">
+                                        <span class="material-icons-outlined me-3">person_outline</span>個人資料
+                                    </a>
+                                    <hr>
+                                    <a href="" class="d-flex align-items-center">
+                                        <span class="material-icons-outlined me-3">language</span>語系
+                                    </a>
+                                    <a href="publish.html" class="d-flex align-items-center">
+                                        <span class="material-icons-outlined me-3">home</span>刊登旅宿
+                                    </a>
+                                    <hr>
+                                    <a href="signup.html" class="d-flex align-items-center">
+                                        <span class="material-icons-outlined me-3">person_add</span>註冊
+                                    </a>
+                                    <a href="signup.html" class="d-flex align-items-center">
+                                        <span class="material-icons-outlined me-3">login</span>登入
+                                    </a>
+                        
+                        
+                                </div>
+                            </div>
+                            <!-- 選單內容結束 -->
+                        </li>
+                        <!-- 漢堡選單結束 -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <a href="information.html" class="search-room">查看空房</a>
+        <nav class="productDital-nav bg-success">
+            <div class="container">
+                <ul class="row row-cols-lg-6 ">
+                    <li class="col text-center">
+                        <a href="#vacant" class="scrollTop  text-white ">空房情況</a>
+                    </li>
+                    <li class="col text-center">
+                        <a href="#equipment" class="scrollTop text-white">設備服務</a>
+                    </li>
+                    <li class="col text-center">
+                        <a href="#evaluation" class="scrollTop text-white">評價留言</a>
+                    </li>
+                    <li class="col text-center">
+                        <a href="#map" class="scrollTop text-white">地理位置</a>
+                    </li>
+                    <li class="col text-center">
+                        <a href="#notice" class="scrollTop text-white">訂房須知</a>
+                    </li>
+                    <li class="col text-center">
+                        <a href="#qa" class="scrollTop last-line text-white">常見問題</a>
+                    </li>
+        
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- 表頭結束 -->
+    
+    <!-- 表頭結束 -->
+    <main class="productDital-main productDital-same-banner">
+        <!-- 標題開始 -->
+        <section class="productDital-title mb-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <!-- 麵包屑開始 -->
+                        <nav aria-label="breadcrumb ">
+                            <ol class="breadcrumb mb-6  mt-6">
+                                <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                                <li class="breadcrumb-item ms-1"><a href="#">土耳其</a></li>
+                                <li class="breadcrumb-item ms-1"><a href="#">伊斯坦堡</a></li>
+                                <li class="breadcrumb-item active ms-1 text-op60" aria-current="page">加拉塔沃爾頓酒店</li>
+                            </ol>
+                        </nav>
+                        <!-- 麵包屑結束 -->
+                        <h2 class="mb-4">加拉塔沃爾頓酒店<span class="h4 ms-2">Walton Hotels Galata</span></h2>
+                        <div class="d-flex flex-column flex-md-row">
+                            <p class="mb-0">
+                                <small class="d-flex align-items-center "><span class="material-icons">star</span><span class="fw-bold me-1">4.8</span>(239) ·</small>
+                            </p>
+                            <p class="mb-0">
+                                <small class="d-flex align-items-center"><span class="material-icons">location_on</span>Fatih 、伊斯坦布爾 (İstanbul) 、土耳其</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 標題結束 -->
+        <!-- banner開始 -->
+        <section class="porductDital-banner mb-56">
+            <div class="desk-banner">
+                <div class="container">
+                    <div class="row gx-2">
+                        <div class="col-md-8 col-lg-9">
+                            <div class="img-1"></div>
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <div class="img-2 mb-2"></div>
+                            <div class="img-3 mb-2"></div>
+                            <div class="img-4">
+                                <div class="txt d-flex align-items-center justify-content-center">
+                                    <a href="" class="text-white">查看更多</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 手機banner開始 -->
+            <!-- Slider main container -->
+            <div class="mobile-banner">
+                <img src="./img/procuct3.jpg" alt="" class="img-fluid">
+            </div>
+            <!-- 手機banner結束 -->
+        </section>
+        <!-- banner結束 -->
+        <section class="productDital-infomation">
+            <div class="container">
+                <div class="row">
+                    <!-- 左欄開始 -->
+                    <div class="col-lg-8">
+                        <!-- 住房特色開始 -->
+                        <div class="stay-feature mb-128">
+                            <h4 class="sub-title mb-6">住房特色</h4>
+                            <div class="row row-cols-1 row-cols-md-2 gy-3 g-md-5">
+                                <div class="col">
+                                    <div class="card p-4">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h6>服務人員很棒</h6>
+                                                <span class="material-icons">
+                                                    thumb_up
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card p-4">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h6>地理位置很好</h6>
+                                                <span class="material-icons">
+                                                    location_city
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card p-4">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h6>整潔度超棒</h6>
+                                                <span class="material-icons">
+                                                    wash
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card p-4">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h6>館內設施很棒</h6>
+                                                <span class="material-icons">
+                                                    auto_awesome
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 住房特色結束 -->
+                        <!-- 飯店介紹開始 -->
+                        <div class="introduction mb-64">
+                            <h4 class="sub-title mb-6">飯店介紹</h4>
+                            <p class="fw-bolder">博斯普魯斯瑞士飯店一直致力於為您提供最尊貴的服務與一流的設施，確保您下榻期間愉快、愜意。 為了給客人提供更舒適和更便利的服務，住宿配備了24小時送餐服務, 所有房型皆附免費WiFi, 24小時前台服務, 配有無障礙協助設備,
+                            快速入住/退房服務。</p>
+                            <p>您將能真切地感受到博斯普魯斯瑞士飯店的特有的氛圍，它體現在每一間精心規劃的客房中。完善的貼心設施與服務隨處可見，如：平面電視, 寢具用品, 鏡子, 室內拖鞋, 沙發， 住宿設有眾多娛樂設施，例如：熱水浴池, 健身房, 桑拿三溫暖,
+                            室内游泳池, Spa，都是放鬆身心的最佳選擇。</p>
+                        </div>
+                        <!-- 飯店介紹結束 -->
+                        <!-- 空房情況開始 -->
+                        <div class="vacant py-64 mb-64" id="vacant">
+                            <h4 class="sub-title mb-6" >空房情況</h4>
+                            <div class="card mb-4">
+                                <div class="card-header border-0 py-4 px-5 bg-secondary">
+                                   <ul class="d-flex fw-bolder">
+                                       <li style="width: 28%;">雙人房</li>
+                                       <li  style="width: 25%;">價格</li>
+                                       <li style="width: 30%;">房數</li>
+                                        <li>預定</li>
+                                   </ul>
+                                </div>
+                                <div class="card-body d-flex align-items-center justify-content-between p-5 ">
+                                    <div class="v-infomation">
+                                        <p class="mb-2">
+                                            <span class="material-icons">person</span>
+                                            <span class="material-icons">person</span>
+                                        </p>
+                                        <ul class="style">
+                                            <li class="d-flex align-items-center mb-2"><span class="material-icons me-3">wifi</span>免費Wi-Fi</li>
+                                            <li class="d-flex align-items-center mb-2"><span class="material-icons me-3">bed</span>1張特大床</li>
+                                            <li class="d-flex align-items-center mb-2"><span class="material-icons me-3">window</span>15 m²</li>
+                                            <li class="d-flex align-items-center mb-4"><span class="material-icons me-3">bathtub</span>私人衛浴</li>
+                                        </ul>
+                                        <a href="" class="d-flex align-items-center text-danger"><span class="material-icons me-3">control_point</span>顯示更多</a>
+                                    </div>
+                                    <h5 class="fw-bold  ">TWD 8,959</h5>
+                                    <div class="amount d-flex align-items-center justify-content-between  w-50  ">
+                                        <select class="form-select  py-4  w-25 " aria-label=".form-select-lg example">
+                                            <option selected>0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                        <a href="information.html" class="btn btn-primary  py-4  btn-booking ">現在就預定</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="card mb-4">
+                                <div class="card-header border-0 py-4 px-5 bg-secondary">
+                                    <ul class="d-flex fw-bolder">
+                                        <li style="width: 28%;">單人房</li>
+                                        <li style="width: 25%;">價格</li>
+                                        <li style="width: 30%;">房數</li>
+                                        <li>預定</li>
+                                    </ul>
+                                </div>
+                                <div class="card-body d-flex align-items-center justify-content-between p-5 ">
+                                    <div class="v-infomation">
+                                        <p class="mb-2">
+                                            <span class="material-icons">person</span>
+                                        </p>
+                                        <ul class="style">
+                                            <li class="d-flex align-items-center mb-2"><span class="material-icons me-3">wifi</span>免費Wi-Fi</li>
+                                            <li class="d-flex align-items-center mb-2"><span class="material-icons me-3">bed</span>1張特大床</li>
+                                            <li class="d-flex align-items-center mb-2"><span class="material-icons me-3">window</span>15 m²</li>
+                                            <li class="d-flex align-items-center mb-4"><span class="material-icons me-3">bathtub</span>私人衛浴</li>
+                                        </ul>
+                                        <a href="" class="d-flex align-items-center text-danger"><span
+                                                class="material-icons me-3">control_point</span>顯示更多</a>
+                                    </div>
+                                    <h5 class="fw-bold  ">TWD 4,200</h5>
+                                    <div class="amount d-flex align-items-center justify-content-between  w-50  ">
+                                        <select class="form-select  py-4  w-25 " aria-label=".form-select-lg example">
+                                            <option selected>0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                        <a href="information.html" class="btn btn-primary  py-4  btn-booking ">現在就預定</a>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 空房情況結束 -->
+                        <!-- 設備服務開始 -->
+                        <div class="equipment mb-128" id="equipment">
+                            <h4 class="sub-title mb-6">設備服務</h4>
+                            <div class="row row-cols-2 row-cols-md-3 g-1 mb-6">
+                                <div class="col">
+                                    <div class="img img-1">
+                                        <div class="txt">
+                                            <p class="mb-0 text-white">Spa</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="img img-2">
+                                        <div class="txt">
+                                            <p class="mb-0 text-white">泳池</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="img img-3">
+                                        <div class="txt">
+                                            <p class="mb-0 text-white">網球場</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="img img-4">
+                                        <div class="txt">
+                                            <p class="mb-0 text-white">健身房</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class=" img img-5">
+                                        <div class="txt">
+                                            <p class="mb-0 text-white">酒吧</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="img img-6">
+                                        <div class="txt">
+                                            <p class="mb-0 text-white">餐廳</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-primary rounded-pill py-4 px-5 ">顯示全部設備與服務</button>
+                        </div>
+                        <!-- 設備服務結束 -->
+                        <!-- 評價留言開始 -->
+                        <div class="evaluation mb-128" id="evaluation">
+                            <h4 class="sub-title mb-6">評價留言</h4>
+                            <div class="row justify-content-between mb-6 ">
+                                <div class="col-12 col-md-3">
+                                    <div class="title d-flex align-items-center">
+                                        <div class=" text-white bg-primary rounded-1 p-4 fw-bold h4 ">9.2</div>
+                                        <div class="ms-2 ">
+                                            <h5 class="mb-0">很讚</h5>
+                                            <p>239則評價</p>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <p class="mb-0 me-2 "><small>乾淨</small></p>
+                                        <div class="progress  me-2 mb-0">
+                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="mb-0 "><small>4.5</small></p>
+                                    </div>
+                                    <div class="d-flex align-items-center  mb-3 ">
+                                        <p class="mb-0 me-2  "><small>溝通</small></p>
+                                        <div class="progress  me-2 mb-0" >
+                                            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="mb-0 "><small>4.7</small></p>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-3 mb-col-md-0 ">
+                                        <p class="mb-0 me-2 "><small>舒適</small></p>
+                                        <div class="progress  me-2 mb-0" >
+                                            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="mb-0 "><small>4.7</small></p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="d-flex align-items-center mb-3 ">
+                                        <p class="mb-0 me-2 "><small>準確</small></p>
+                                        <div class="progress  me-2 mb-0" >
+                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="mb-0 "><small>4.5</small></p>
+                                    </div>
+                                    <div class="d-flex align-items-center  mb-3 ">
+                                        <p class="mb-0 me-2  "><small>性價</small></p>
+                                        <div class="progress  me-2 mb-0" >
+                                            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="mb-0 "><small>4.7</small></p>
+                                    </div>
+                                    <div class="d-flex align-items-center  ">
+                                        <p class="mb-0 me-2 "><small>位置</small></p>
+                                        <div class="progress  me-2 mb-0" style="width: 60%; height: 8px;">
+                                            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="mb-0 "><small>4.7</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-primary rounded-pill py-4 px-5">顯示全部評價與留言</button>
+                        </div>
+                        <!-- 評價留言結束 -->
+                        <!-- 地理位置開始 -->
+                        <div  class="map mb-64" id="map">
+                            <h4 class="sub-title mb-6">地理位置</h4>
+                            <div id="ditalmap" class="img-map mb-6">
+                            </div>
+                        </div>
+                        <!-- 地理位置結束 -->
+                        <!-- 訂房須知開始 -->
+                        <div class="notice vacant py-64" id="notice">
+                            <h4 class="sub-title mb-6">訂房須知</h4>
+                            <div class="card border-primary border-4" >
+                                <div class="card-body p-4 p-md-8">
+                                    <table class="table table-borderless">
+                                        <tbody>
+                                            <tr >
+                                                <th scope="row" >入住時間</th>
+                                                <td>最早可辦理入住的時間: 14:00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">退房時間</th>
+                                                <td>最晚可辦理退房的時間: 12:00</td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">交通資訊</th>
+                                                <td>機場接送服務價格: 22 EUR</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">住宿概況</th>
+                                                <td>禁止吸煙、不允許攜帶寵物、不允許舉辦聚會和活動</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">實用資訊</th>
+                                                <td>早餐收費（適用未附早餐房價）: 5 EUR</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">退訂政策</th>
+                                                <td>48小時內可免費取消</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 訂房須知結束 -->
+                        <!-- 常見問題開始 -->
+                        <div class="qa vacant py-64" id="qa">
+                            <h4 class="sub-title mb-6">常見問題</h4>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item border-0 bg-transparent mb-4">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                            Q1 、註冊完成後的下一步？
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse  bg-white" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p class="mb-0">請您使用個人電腦登入網站，輸入您原先設定的 email 帳號密碼，登入後，若您的帳號尚未通過認證，系統網站會引導您重新寄送認證信件，請您點選重寄認證信，並於 24
+                                                小時內到您的信箱點選「認證」按鈕即可。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item border-0 bg-transparent mb-4">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Q2 、可以再傳一次入住憑證給我嗎？
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse bg-white" aria-labelledby="headingTwo"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p class="mb-0">可以。歡迎您於我們的作業時間來電洽詢訂房、旅遊相關事宜，我們將竭誠為您服務。您可於訂房時
+                                                選擇欲入住的日期，客房價格隨季節及人文活動而異動，各房價以「查詢空房與房價」顯示之當日價格為標準。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item border-0 bg-transparent mb-4">
+                                    <h2 class="accordion-header" id="headingThtee">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Q3 、稍後是否可更新我的註冊資料？
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse bg-white" aria-labelledby="headingThree"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p class="mb-0">可立即確認飯店尚有房間，不用等到客服人員確認訂房狀況；您可於下單流程直接選擇付款方式，並於繳款期限內完成付款，即可完成訂房。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item border-0 bg-transparent mb-4">
+                                    <h2 class="accordion-header" id="headingFour">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            Q4 、我的住宿何時能上線？
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse bg-white" aria-labelledby="headingFour"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p class="mb-0">可立即確認飯店尚有房間，不用等到客服人員確認訂房狀況；您可於下單流程直接選擇付款方式，並於繳款期限內完成付款，即可完成訂房。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item border-0 bg-transparent">
+                                    <h2 class="accordion-header" id="headingFive">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                            Q5 、為什麼要支付佣金？
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFive" class="accordion-collapse collapse bg-white rounded-0" aria-labelledby="headingFive"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body ">
+                                            <p class="mb-0">可立即確認飯店尚有房間，不用等到客服人員確認訂房狀況；您可於下單流程直接選擇付款方式，並於繳款期限內完成付款，即可完成訂房。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 常見問題結束 -->
+                    </div>
+                    <!-- 左欄結束 -->
+                    <!-- 右欄開始 -->
+                    <div class="col-lg-4">
+                        <div class="card bg-secondary border-0 p-2">
+                            <div class="card-body">
+                                <div class="">
+                                    <h4 class="mb-3 fw-bold">$1,520起</h4>
+                                    <label for="" class="where w-100 mb-1">
+                                        <input class="form-control py-4 fw-normal" type="text" placeholder="你要去哪裡？">
+                                    </label>
+                                    <label for="" class="where date w-100 mb-1">
+                                        <input class="form-control py-4 fw-normal" type="text" placeholder="入住 ─ 退房">
+                                    </label>
+                                    <label for="" class="where person w-100 mb-3">
+                                        <input class="form-control py-4 fw-normal" type="text" placeholder="2位成人‧ 沒有孩童入住 ‧ 1間房">
+                                    </label>
+                                    <a href="information.html" class=" btn btn-primary py-4 w-100 ">
+                                        查看空房情況
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 右欄結束 -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="index-footer py-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h4><a href="index.html">doorway</a></h4>
+                    <p class="p-title mb-8">與我們一起環遊世界</p>
+                    <p class="p-public"><small>© DOORWAY Inc. All Rights Reserved.</small></p>
+                </div>
+                <div class="col-lg-8 ">
+                    <nav class="d-flex justify-content-between">
+                        <div>
+                            <h4 class="mb-4">目的地</h4>
+                            <ul class="">
+                                <li class="mb-3"><a href="">國家</a></li>
+                                <li class="mb-3"><a href="">地區</a></li>
+                                <li class="mb-3"><a href="">城市</a></li>
+                                <li class="mb-3"><a href="">景點</a></li>
+                                <li><a href="">青年旅館</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="mb-4">住宿類型</h4>
+                            <ul class="">
+                                <li class="mb-3"><a href="">民宿</a></li>
+                                <li class="mb-3"><a href="">公寓</a></li>
+                                <li class="mb-3"><a href="">渡假村</a></li>
+                                <li class="mb-3"><a href="">Villa</a></li>
+                                <li><a href="">青年旅館</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="mb-4">服務</h4>
+                            <ul class="">
+                                <li class="mb-3"><a href="">出租房源</a></li>
+                                <li class="mb-3"><a href="">租車</a></li>
+                                <li class="mb-3"><a href="">訂機票</a></li>
+                                <li class="mb-3"><a href="">餐廳訂位</a></li>
+                                <li><a href="">資源中心</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="mb-4">關於我們</h4>
+                            <ul class="">
+                                <li class="mb-3"><a href="">客服中心</a></li>
+                                <li class="mb-3"><a href="">常見問題</a></li>
+                                <li class="mb-3"><a href="">隱私權政策</a></li>
+                                <li class="mb-3"><a href="">Cookie政策</a></li>
+                                <li><a href="">服務條款</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="top">
+        <a href="" class="d-flex align-items-center  justify-content-center"><span class="material-icons">north</span></a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d10d055091.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="js/all.js"></script>
+    
+    
+<script>
+
+</script>
+    
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    
+</body>
+
+</html>

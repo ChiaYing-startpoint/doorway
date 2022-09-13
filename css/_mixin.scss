@@ -1,0 +1,49 @@
+@mixin pad {
+    @media(max-width:912px){
+        @content;
+    }
+}
+@mixin padPro{
+    @media(max-width:1024px){
+        @content;
+    }
+
+}
+
+@mixin iphone{
+    @media(max-width: 540px){
+        @content;
+    }
+}
+
+
+@mixin size($w,$h) {
+    width: $w;
+    height: $h;
+}
+// 背景圖
+@mixin imgBg {
+    background-position: center center;
+    background-size: cover;
+}
+@mixin imgHover {
+    opacity: 0.87;
+    transform: scale(1.02);
+    transition: all .45s;
+}
+// 卡片hover還原開始
+@mixin resetCard{
+    .card{
+        border-radius: 0px !important;
+    }
+    .card:hover{
+        box-shadow: none !important;
+        .img{
+            overflow: hidden;
+        }
+        img{
+            @include imgHover;
+        }
+    }
+}
+// 卡片hover還原結束

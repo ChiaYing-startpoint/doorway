@@ -1,0 +1,284 @@
+
+.information-header{
+    padding: 20px 0px !important;
+    @include iphone{
+        margin-bottom: 0 !important;
+    }
+}
+// 步驟開始
+.information-nav{
+    .col-lg-12{
+        @include iphone{
+            padding: 0px !important;
+        }
+    }
+}
+.step{
+    @include pad{
+        justify-content: flex-start !important;
+    }
+}
+.step li { //長方形
+    // padding:17px !important;
+    height: 64px;
+    background: $warning;
+    position: relative;
+    text-align: center;
+    border-radius: 0.02rem;
+    line-height: 3.5;
+    width: 20%;
+    @include pad{
+        width: 28%;
+    }
+    @include iphone{
+        width: 36%;
+        height: 44px;
+        font-size: $font-12;
+        margin-right: 4px !important;
+    }
+}
+.step li:nth-child(2),.step li:nth-child(3){
+    @include pad{
+        padding-left: 16px !important;
+    }
+    @include iphone{
+        padding-left: 0px !important;
+    }
+}
+.step li:nth-child(3){
+    margin-right: 0px !important;
+}
+.step li::after{ //後面三角形
+    content: '';
+    display: block;
+    border-top: 32px solid transparent;
+    border-bottom: 32px solid transparent;
+    border-left: 32px solid $warning;
+    position: absolute;
+    right:-32px;
+    top: 0;
+}
+.step li::before{ //前面三角形
+    content: '';
+    display: block;
+    border-top: 32px solid transparent;
+    border-bottom: 32px solid transparent;
+    border-left: 32px solid white;
+    position: absolute;
+    left:0px;
+    top: 0;
+}
+.step li::after,.step li::before{
+    @include iphone{
+        display: none;
+    }
+}
+.step li:first-child::before{ 
+    display: none;
+}
+.step li.active{ //點擊後
+    background: $success;
+    color:white;
+}
+.step li.active::after{
+    border-left: 32px solid $success;
+}
+
+// 步驟結束
+// 填寫表單開始
+.information-main{
+    border-bottom: 1px solid rgba($primary,0.125);
+    .customer{
+         box-shadow: 0 2px 10px rgba($primary,0.15);
+         @include pad{
+             padding: 32px !important;
+         }
+         @include iphone{
+             box-shadow: 0px 0px 0px rgba($primary,0.15);
+             padding: 24px 0px !important;
+         }
+        h4 span{
+            font-size: $font-14 !important;
+        }
+    }
+    .infor-box{
+        @include iphone{
+            margin-bottom: 24px !important;
+        }
+    }
+    .infor-card-body{
+        @include pad{
+            padding: 8px !important;
+        }
+        h5{
+            @include pad{
+                 font-size: $font-16 !important;
+            }
+         }
+    }
+    .btn-last{
+        @include iphone{
+            width: 100% !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+    
+    @include resetCard;
+        .infor-item{
+            @include pad{
+                flex-direction: column;
+                align-items: flex-start !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            .txt{
+                @include pad{
+                    margin-left: 0 !important;
+                }
+            }
+            .img{
+                background: url('../img/information1.jpg')no-repeat;
+                @include imgBg;
+                width: 160px;
+                height: 120px;
+                @include pad{
+                    width: 100% ;
+                    margin-bottom: 16px;
+                }
+                @include iphone{
+                    background: url('../img/information-1pad.jpg')no-repeat;
+                    @include imgBg;
+                    height: 200px;
+                }
+            }
+            
+        }
+}
+// 填寫表單結束
+
+
+
+// welldown開始
+.welldown-header{
+    @include iphone{
+        margin-bottom: 40px !important;
+    }
+}
+.welldown-footer{
+    @include iphone{
+        display: none;
+    }
+}
+.welldown-main{
+    border-bottom: 1px solid rgba($primary,0.125);
+    @include iphone{
+        padding-bottom: 0px !important;
+    }
+     .card{
+        border-radius: 0px !important;
+    }
+    .card:hover{
+        box-shadow: none !important;
+        .img{
+            overflow: hidden;
+        }
+        img{
+            @include imgHover;
+        }
+    }
+    .card-title,.card-price{
+        @include pad{
+            font-size: $font-16 !important;
+        }
+    }
+    .card-eng{
+        @include pad{
+            font-size: $font-14;
+        }
+    }
+    .customer{
+        @include pad{
+             padding: 32px !important;
+         }
+         @include iphone{
+             box-shadow: 0px 0px 0px rgba($primary,0.15);
+             padding: 0px !important;
+             margin-bottom: 48px !important;
+         }
+    }
+    h2 .material-icons{
+        font-size: $font-32;
+    }
+    .welldown-item{
+        .img{
+            background: url(../img/welldown1.jpg)no-repeat;
+            @include imgBg;
+            width: 280px;
+            height: 180px;
+        }
+        .score{
+        font-size: $font-14 !important;
+    }
+    .icon-color{
+        color: #FF7973;
+        .material-icons{
+             padding: 0;
+             @include pad{
+                 font-size: $font-16;
+             }
+        }
+    }
+    .card-price{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+    }
+    .material-icons{
+        letter-spacing: -6px;
+        }
+    }
+    .welldown-aside{
+        background: rgba($warning,.6);
+        @include pad{
+            padding: 0px !important;
+        }
+    }
+    .welldown-list{
+        h5{
+            font-size: $font-18;
+            @include pad{
+                font-size: $font-16;
+            }
+        }
+        li{
+            @include pad{
+                margin-bottom: 12px !important;
+            }
+        }
+        li:hover{
+            .btn{
+                background: rgba($secondary,.6);
+                margin-left: 8px;
+            }
+        }
+    }
+    th{
+        width: 25%;
+        @include pad{
+            width: 27%;
+        }
+       
+    }
+}
+.welldown-box{
+    @include iphone{
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+// welldown結束
+

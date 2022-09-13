@@ -1,0 +1,228 @@
+// 標籤開始
+.product-tag{
+    overflow-x: hidden !important;
+    .swiper-container{
+        width: 100vw !important;
+    }
+}
+.product-input,.product-tag{ //搜尋欄+標籤
+    display: none;
+    @include iphone{
+        display: block;
+    }
+}
+.nav-header{
+    padding: 20px 0px !important;
+}
+// 標籤結束
+.product-header{
+    // border-bottom: 1px solid $warning;
+     box-shadow: 0 0px 28px rgba($primary,0.1);
+     padding: 0px 16px !important;
+     @include iphone{
+         padding: 0px 0px !important;
+     }
+}
+.product-main{
+    border-bottom: 1px solid rgba($primary,0.125);
+    // 右欄開始
+    .aside-form{
+        margin-top: 160px;
+        @include pad{
+            padding-right: 16px !important;
+        }
+    }
+    
+    .aside-form::before{
+        content: '';
+        position: absolute;
+        left: -1000%;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        height: 100%;
+        background:rgba($warning,.6);
+        z-index: -1;
+    }
+    .product-aside{ //左欄
+        position: relative;
+        @include iphone{
+            display: none;
+        }
+        
+        h4{
+            font-size: $font-20;
+        }
+        .form-check-label{
+            font-size: $font-14;
+        }
+        .aside-search{
+           
+            @include padPro{
+                display: none;
+            }
+        }
+        .p-number{
+            @include pad{
+                display: none;
+            }
+        }
+    }
+    .breadcrumb{
+        @include iphone{
+            display: none;
+        }
+    }
+    .sort-input{
+         @include iphone{
+            display: none;
+        }
+    }
+    .card{
+        @include iphone{
+            margin-bottom: 12px !important;
+        }
+    }
+     h5{
+        @include padPro{
+            font-size: $font-16;
+         }
+    }
+    p{
+        @include padPro{
+            font-size: $font-14;
+            margin-bottom: 0;
+        }
+    }
+    .material-icons{
+         @include padPro{
+             font-size: $font-16;
+        }
+    }
+    .score{
+        @include padPro{
+             font-size: $font-12;
+            padding: 6px !important;
+         }
+     }
+     thead{
+         .th-material{
+             @include pad{
+                 width: 200px;
+             }
+         }
+         
+     }
+     tbody{
+         a{
+             @include pad{
+                 margin-left: 0 !important;
+                 
+             }
+         }
+     }
+     
+     .ma{
+         font-size: 24px;
+     }
+
+    // 右欄結束
+}
+.filterModal{
+    .f-item{
+        border: 1px solid $success;
+        text-align: center;
+        padding: 16px;
+        border-radius: 0.25rem;
+    }
+    .f-item.active{
+        background: $success;
+        color: $white;
+    }
+    .btn-more{
+        display: block;
+        width: 100%;
+        padding: 16px;
+        text-align: center;
+    }
+}
+
+.modal-dialog{ //滿版
+    @include iphone{
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto !important;
+        height: 100%;
+    }
+    .btn-search{
+        width: 30%;
+    }
+    
+}
+// 地圖開始
+.body{
+    position: relative;
+}
+.map-img{
+    
+   position: absolute;
+   left: 2%;
+   top: 32px;
+   @media(min-width:1400px){
+       left: 4%;
+   }
+   @media(min-width:1600px){
+        left: 16.2%;
+    }
+    @include padPro{
+        left: 4%;
+    }
+    
+    @include iphone{
+        position: fixed;
+         left: 50%;
+         top:92%;
+         z-index: 50;
+         transform: translateX(-50%);
+         
+    }
+}
+.map-img a{
+    background: url(../img/product-map.jpg);
+    @include imgBg;
+    display: block;
+    width: 275px;
+    height: 138px;
+    @include padPro{
+        width: 180px;
+    }
+    @include pad{
+        width: 133px;
+        height: 133px;
+    }
+    @include iphone{
+        background: url(../img/product-map.svg);
+        width: 48px;
+        height: 48px;
+        color:$primary;
+    }
+}
+            
+ .product-map{
+    height: 80vh;
+    @include padPro{
+        height: 88vh;
+    }
+}
+.mapModal{
+   
+    .col-person,.col-date,a{
+        @include iphone{
+            display: none !important;
+        }
+    }
+}
+// 地圖結束
