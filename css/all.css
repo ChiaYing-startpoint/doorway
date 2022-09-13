@@ -16373,6 +16373,17 @@ body {
     display: none !important;
   }
 }
+.admin-main .admin-aside::before {
+  content: "";
+  position: absolute;
+  left: -1000%;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background: rgba(240, 233, 224, 0.6);
+  z-index: -1;
+}
 .admin-main .admin-aside {
   position: fixed;
   top: 0;
